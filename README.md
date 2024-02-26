@@ -14,7 +14,7 @@ The new simulator interface in KiCad 8.0 is offering a lot of enhancements, whic
 
 The previous examples (KiCad 6, ngspice-38) are published in [this KiCad forum post](https://forum.kicad.info/t/simulation-examples-for-kicad-eeschema-ngspice/34443), some of which have been updated and included below.
 
-The examples provided should run out-of-the-box: locate the project subfolder, open the `*.kicad_pro` project (or directly open the `*.kicad_sch` file in Eeschema 8.0) > `Inspect` -> `Simulator` -> `Run` (green triangle).
+The examples provided should run out-of-the-box: locate the project subfolder, open the `*.kicad_pro` project (or directly open the `*.kicad_sch` file), in `KiCad Schema Editor` :arrow_right: `Inspect` :arrow_right: `Simulator` :arrow_right: `Run` (green triangle).
 
 
 ## Circuits
