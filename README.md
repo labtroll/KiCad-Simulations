@@ -1,4 +1,4 @@
-# KiCad 8.0 Simulation Projects
+# KiCad 8.0 Simulation Examples for KiCad/Eeschema/ngspice
 
 The subfolders contain KiCad 7.99/8.0 projects with schematics containing ngspice simulations, created by [Holger Vogt](https://forum.kicad.info/u/holger), originally published in a [KiCad forum post](https://forum.kicad.info/t/more-simulation-examples-for-kicad-eeschema-ngspice/45546)
 
@@ -8,9 +8,9 @@ Some of the circuits were presented by Holger in a Youtube video [FOSDEM 2024 - 
 
 For convenience, here is a link to the [Ngspice User's Manual](https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml)
 
-# Simulation examples for KiCad/Eeschema/ngspice
+# Simulation Examples
 
-The new simulator interface in KiCad 8 is offering a lot of enhancements, which make it absolutely worthwile to have a look at this development.
+The new simulator interface in KiCad 8.0 is offering a lot of enhancements, which make it absolutely worthwile to have a look at this development.
 
 The previous examples (KiCad 6, ngspice-38) are published in [this KiCad forum post](https://forum.kicad.info/t/simulation-examples-for-kicad-eeschema-ngspice/34443), some of which have been updated and included below.
 
