@@ -1,0 +1,38 @@
+* 741 model derived from KiCad schematic
+* node sequence according to KiCad symbol LM741
+.subckt KI741 O1 Inv Ninv Vee O2 Out Vcc
+.model NP NPN (BF=125 Cje=0.5p Cjc=0.5p Rb=500)
+.model PN LPNP (BF=25 Cje=0.3p Cjc=1.5p Rb=250)
+Q12 Net-_Q12-Pad1_ Net-_Q12-Pad1_ Vcc PN
+Q13 Net-_C1-Pad1_ Net-_Q12-Pad1_ Vcc PN
+C1 Net-_C1-Pad1_ Net-_C1-Pad2_ 30p
+Q7 Vcc Net-_Q3-Pad1_ Net-_Q5-Pad2_ NP
+Q8 Net-_Q1-Pad1_ Net-_Q1-Pad1_ Vcc PN
+Q1 Net-_Q1-Pad1_ Ninv Net-_Q1-Pad3_ NP
+Q3 Net-_Q3-Pad1_ Net-_Q10-Pad1_ Net-_Q1-Pad3_ PN
+R4 Net-_Q10-Pad3_ Vee 5k
+Q11 Net-_Q10-Pad2_ Net-_Q10-Pad2_ Vee NP
+Q10 Net-_Q10-Pad1_ Net-_Q10-Pad2_ Net-_Q10-Pad3_ NP
+R7 Net-_Q16-Pad2_ Net-_Q15-Pad1_ 7.5k
+R11 Out Net-_Q20-Pad3_ 50
+R10 Net-_Q14-Pad3_ Out 25
+Q17 Net-_C1-Pad1_ Net-_Q14-Pad3_ Out NP
+Q14 Vcc Net-_C1-Pad1_ Net-_Q14-Pad3_ NP
+R6 Net-_C1-Pad1_ Net-_Q16-Pad2_ 4.5k
+Q16 Net-_C1-Pad1_ Net-_Q16-Pad2_ Net-_Q15-Pad1_ NP
+Q5 Net-_Q3-Pad1_ Net-_Q5-Pad2_ O1 NP
+R3 O2 Vee 1k
+R2 Net-_Q5-Pad2_ Vee 50k
+Q6 Net-_C1-Pad2_ Net-_Q5-Pad2_ O2 NP
+R1 O1 Vee 1k
+Q4 Net-_C1-Pad2_ Net-_Q10-Pad1_ Net-_Q2-Pad3_ PN
+Q2 Net-_Q1-Pad1_ Inv Net-_Q2-Pad3_ NP
+Q9 Net-_Q10-Pad1_ Net-_Q1-Pad1_ Vcc PN
+R5 Net-_Q12-Pad1_ Net-_Q10-Pad2_ 39k
+Q22 Net-_C1-Pad2_ Net-_Q19-Pad3_ Vee NP
+R8 Net-_Q15-Pad3_ Vee 50k
+R9 Net-_Q19-Pad3_ Vee 50
+Q15 Net-_Q15-Pad1_ Net-_C1-Pad2_ Net-_Q15-Pad3_ NP
+Q19 Net-_Q15-Pad1_ Net-_Q15-Pad3_ Net-_Q19-Pad3_ NP
+Q20 Vee Net-_Q15-Pad1_ Net-_Q20-Pad3_ PN
+.ends

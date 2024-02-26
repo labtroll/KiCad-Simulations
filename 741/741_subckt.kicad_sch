@@ -1,0 +1,5087 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "35461762-06be-4c9e-bf12-e38db35c4dcf")
+	(paper "A4")
+	(title_block
+		(title "A bipolar transistor 741 circuit")
+		(date "2023-01-04")
+		(comment 1 "Source: https://es.wikipedia.org/wiki/Amplificador_operacional#")
+	)
+	(lib_symbols
+		(symbol "Device:C_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small"
+				(at 0.762 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Small_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_BJT:BCV61"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q?"
+				(at 6.096 1.6511 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "NP"
+				(at 6.096 -0.8889 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "100mA IC, 30V Vce, Double NPN Transistors, Current mirror configuration, SOT-143"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Transistor Double NPN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?143*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BCV61_0_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.302 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 3.175 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 3.175 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 -1.905) (xy 3.175 1.905) (xy 3.175 1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -1.778) (xy 4.318 -1.27) (xy 4.826 -2.286) (xy 3.81 -1.778) (xy 3.81 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "BCV61_1_1"
+				(pin passive line
+					(at 5.08 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_BJT:BCV62"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q?"
+				(at 6.604 0.8891 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "PN"
+				(at 6.604 -1.6509 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "100mA IC, 30V Vce, Double PNP Transistors, Current mirror configuration, SOT-143"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Transistor Double PNP"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?143*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BCV62_0_0"
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "BCV62_0_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.048 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 3.175 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 3.175 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 -1.905) (xy 3.175 1.905) (xy 3.175 1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.937 1.905) (xy 4.445 1.397) (xy 3.429 0.889) (xy 3.937 1.905) (xy 3.937 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "BCV62_1_1"
+				(pin passive line
+					(at 5.08 -5.08 90)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 270)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 230.632 98.806)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1f3e283d-25d4-4b31-ac87-b69f9023eac2")
+	)
+	(junction
+		(at 269.24 77.724)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "20ca9ce3-3a0a-4038-9322-6251b1f76b12")
+	)
+	(junction
+		(at 177.292 67.056)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "236deb91-cc7f-41e7-a11c-ceaee7340e7e")
+	)
+	(junction
+		(at 177.292 84.074)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2581119d-9358-4a12-bcaa-1f466c19d2ee")
+	)
+	(junction
+		(at 239.522 103.886)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d375a75-2efe-4cf2-bc4b-51ec85e797d5")
+	)
+	(junction
+		(at 239.522 63.754)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33d63521-b53b-455f-85eb-3179ef78defe")
+	)
+	(junction
+		(at 206.248 45.974)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "36a10e6f-04ee-4d44-9358-d16fedfe7504")
+	)
+	(junction
+		(at 230.632 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a35c305-cafd-42b7-98f5-30626183ec52")
+	)
+	(junction
+		(at 218.694 94.996)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e7c7055-4c9d-42d6-91d0-22565aafa710")
+	)
+	(junction
+		(at 260.096 69.596)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "413386cb-8d92-4c2e-9206-ff7222d46fd9")
+	)
+	(junction
+		(at 225.806 57.658)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "45203af2-e13b-45bc-982d-3964d4c4cc58")
+	)
+	(junction
+		(at 247.65 93.726)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "481386b0-6c6c-42b3-9b07-7d398f872724")
+	)
+	(junction
+		(at 239.522 78.486)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5feda6aa-bc56-4b74-9507-07652734b465")
+	)
+	(junction
+		(at 187.706 57.658)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "683521d8-0fae-4906-b595-6ae1059afced")
+	)
+	(junction
+		(at 247.65 45.974)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "73e061de-f3d3-41fa-82bf-01c040c41cb7")
+	)
+	(junction
+		(at 230.632 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7bd23843-764e-4996-b1e9-85d888cfec7a")
+	)
+	(junction
+		(at 247.65 63.754)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7dd32d77-16e1-4464-af84-60701d3d92bd")
+	)
+	(junction
+		(at 161.544 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80e77038-bde9-44b8-8ba3-90f3e0a704c4")
+	)
+	(junction
+		(at 239.522 93.726)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a80845d-baaf-413e-afdb-6ed4d260e8b3")
+	)
+	(junction
+		(at 170.688 45.974)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8cfd74da-6635-4bf9-83c0-a83a5a46b0cc")
+	)
+	(junction
+		(at 161.544 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94c70d7e-703a-41a4-afe8-6b3bb1b1e06a")
+	)
+	(junction
+		(at 247.65 69.596)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "96d5b049-2817-4b19-85b1-808c8fb6a5eb")
+	)
+	(junction
+		(at 269.24 85.852)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "979ac9a2-7ac4-4d94-9ca6-b9f5ce49a884")
+	)
+	(junction
+		(at 212.852 101.346)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9919b594-4b74-42d2-bbb5-566f973b40b3")
+	)
+	(junction
+		(at 247.65 98.806)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "991c59fe-6cae-49e8-818d-0e3755814d98")
+	)
+	(junction
+		(at 218.694 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a110b9c9-89d9-4b24-aecd-6d4a812259e5")
+	)
+	(junction
+		(at 218.694 45.974)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a129b13b-3ee2-404f-a674-c6ff2f9cb3e1")
+	)
+	(junction
+		(at 206.248 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a489703b-b2fe-4ed5-a613-03fe88d878ec")
+	)
+	(junction
+		(at 189.992 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b2dc72ff-eb7d-442d-999e-7fd902767444")
+	)
+	(junction
+		(at 161.544 94.234)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b80d9d36-9816-414f-a0a3-f29426f7c32e")
+	)
+	(junction
+		(at 239.522 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "baff9c3f-148a-46c2-ad01-9fff55d28c8e")
+	)
+	(junction
+		(at 170.688 102.108)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd809bdb-5c76-4860-8d3d-f69cfbe1a028")
+	)
+	(junction
+		(at 218.694 63.754)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c1400fcd-4431-4b01-919f-7b920d333d9d")
+	)
+	(junction
+		(at 189.992 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c45e202d-8c5b-4032-8cf7-f5f502889159")
+	)
+	(junction
+		(at 247.65 108.966)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c97d883a-cce2-47a7-80f4-f26207c64ebf")
+	)
+	(junction
+		(at 247.65 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d40fde42-c967-4619-9e73-1cc22ca30eec")
+	)
+	(junction
+		(at 206.248 90.932)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e55ed46c-18db-4a8b-b884-a118ae4cc3cb")
+	)
+	(junction
+		(at 170.688 120.142)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef83e0ae-b3dd-4d97-8d56-d01f0f1f442a")
+	)
+	(junction
+		(at 187.706 67.056)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f5cfd404-289b-4224-a9e5-bc5d708ca6f4")
+	)
+	(junction
+		(at 177.292 45.974)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f67f7b4d-cc13-44e8-bdcf-a4473822c1ab")
+	)
+	(junction
+		(at 189.992 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f80f735d-553d-4b21-918e-3093b3226079")
+	)
+	(wire
+		(pts
+			(xy 218.694 62.738) (xy 218.694 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "056d8214-8c57-470c-bb94-45eb4657f157")
+	)
+	(wire
+		(pts
+			(xy 230.632 74.422) (xy 230.632 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05c1262b-d539-4f65-9b7a-b86e24c8d674")
+	)
+	(wire
+		(pts
+			(xy 218.694 120.142) (xy 218.694 106.426)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "087a2dfa-9d09-4416-802a-f74cfb8c8dcc")
+	)
+	(wire
+		(pts
+			(xy 170.688 89.154) (xy 170.688 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a5ccd2f-82ca-4a16-871d-17cd8c648ddb")
+	)
+	(wire
+		(pts
+			(xy 189.992 89.154) (xy 189.992 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c321a2f-6491-48d6-9dd5-87dfad41ef72")
+	)
+	(wire
+		(pts
+			(xy 269.24 45.974) (xy 269.24 64.516)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12541433-6343-42aa-a1f4-c0a03b259b66")
+	)
+	(wire
+		(pts
+			(xy 170.688 99.314) (xy 170.688 102.108)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13cf4ad5-49e1-4e50-b534-cd04e28c065b")
+	)
+	(wire
+		(pts
+			(xy 230.632 120.142) (xy 218.694 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14295c0a-36ef-4747-b281-517457261634")
+	)
+	(wire
+		(pts
+			(xy 156.464 45.974) (xy 170.688 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15c9a9ac-1369-415a-bf93-ca6387603b95")
+	)
+	(wire
+		(pts
+			(xy 247.65 62.738) (xy 247.65 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1769519f-94f4-4b25-ba46-e539579e12a0")
+	)
+	(wire
+		(pts
+			(xy 218.694 45.974) (xy 247.65 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "176e2ea7-e49b-458e-b544-26929c08a20c")
+	)
+	(wire
+		(pts
+			(xy 187.706 67.056) (xy 189.992 67.056)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18f14b1b-16bb-47ce-9ae7-40d2d6d69ac6")
+	)
+	(wire
+		(pts
+			(xy 192.278 107.95) (xy 189.992 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a5cc14c-bc82-4fa6-b72c-707805321b98")
+	)
+	(wire
+		(pts
+			(xy 269.24 85.852) (xy 269.24 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ad2414d-046e-4df9-9d70-90eb2af3f1cd")
+	)
+	(wire
+		(pts
+			(xy 195.072 72.898) (xy 196.85 72.898)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c137cab-787d-47f2-8a61-60897d20a412")
+	)
+	(wire
+		(pts
+			(xy 189.992 120.142) (xy 206.248 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "212486d5-b1f7-405e-a94a-3d213ffd7ed5")
+	)
+	(wire
+		(pts
+			(xy 206.248 45.974) (xy 218.694 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21c30183-7cef-44e5-b972-f57ad2a0d5e9")
+	)
+	(wire
+		(pts
+			(xy 189.992 67.056) (xy 189.992 67.818)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a483c7a-0045-4df2-9429-7f8b2f9c4df4")
+	)
+	(wire
+		(pts
+			(xy 177.292 90.932) (xy 206.248 90.932)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "303727cb-b300-4472-b68a-7e4a83d683ee")
+	)
+	(wire
+		(pts
+			(xy 161.544 107.188) (xy 161.544 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3066b2a3-3123-4f18-88c1-0f83ce16adf5")
+	)
+	(wire
+		(pts
+			(xy 166.624 84.074) (xy 177.292 84.074)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3205d3d3-23e1-41a3-a83f-ba93df6f2346")
+	)
+	(wire
+		(pts
+			(xy 177.292 62.738) (xy 177.292 67.056)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "362d4a54-c078-4aed-b779-9defb5364443")
+	)
+	(wire
+		(pts
+			(xy 170.688 102.108) (xy 184.912 102.108)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36dcf3dc-4eed-4139-b0a0-f890b1f7d62f")
+	)
+	(wire
+		(pts
+			(xy 170.688 102.108) (xy 170.688 110.236)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38bb0ace-e2d9-49b8-8ddd-6b1c2e964d7e")
+	)
+	(wire
+		(pts
+			(xy 247.65 83.566) (xy 247.65 93.726)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cdcba4e-c5f6-42fa-b5d9-044a32be92d4")
+	)
+	(wire
+		(pts
+			(xy 206.248 45.974) (xy 206.248 52.578)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e885abc-c471-4c78-83ea-4ba48d0a9372")
+	)
+	(wire
+		(pts
+			(xy 247.65 69.596) (xy 247.65 73.406)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40d767f5-0ced-44da-a58f-5a737bb9bfce")
+	)
+	(wire
+		(pts
+			(xy 239.522 103.886) (xy 239.522 110.236)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40ea0dd8-1795-46f4-9d8c-7b7804bb3f56")
+	)
+	(wire
+		(pts
+			(xy 260.096 69.596) (xy 260.096 72.644)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49461062-c2a6-4cc5-8110-a45227bd7a9a")
+	)
+	(wire
+		(pts
+			(xy 161.544 67.056) (xy 161.544 67.818)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b072dcc-7e6a-4235-9f21-7f3bd69c7b7f")
+	)
+	(wire
+		(pts
+			(xy 225.806 63.754) (xy 218.694 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c513a98-3073-4369-ad9e-02bb2df64321")
+	)
+	(wire
+		(pts
+			(xy 269.24 103.886) (xy 269.24 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ce33096-57a0-4562-8b13-a805ec5733f1")
+	)
+	(wire
+		(pts
+			(xy 206.248 115.062) (xy 206.248 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d1a5715-b270-491b-9f28-4ee3d9f788aa")
+	)
+	(wire
+		(pts
+			(xy 230.632 63.754) (xy 239.522 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4db12d33-4369-44ce-bc92-31a472e08522")
+	)
+	(wire
+		(pts
+			(xy 187.706 57.658) (xy 187.706 67.056)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4df21d6b-bb32-4bcb-bec8-153c19da2b85")
+	)
+	(wire
+		(pts
+			(xy 247.65 98.806) (xy 264.16 98.806)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f97816e-6830-431e-ae87-6c9774cc72c7")
+	)
+	(wire
+		(pts
+			(xy 189.992 120.142) (xy 189.992 115.062)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52117071-280e-47f4-a06a-0495986b79cb")
+	)
+	(wire
+		(pts
+			(xy 154.432 72.898) (xy 156.464 72.898)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "538d9d23-4c68-44bd-80f1-60badd776059")
+	)
+	(wire
+		(pts
+			(xy 177.292 84.074) (xy 184.912 84.074)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "567e5004-a91f-486d-8a01-8bd10f0da431")
+	)
+	(wire
+		(pts
+			(xy 239.522 103.886) (xy 242.57 103.886)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "630a86ab-876b-4e66-a37d-e67c51778ce3")
+	)
+	(wire
+		(pts
+			(xy 182.372 57.658) (xy 187.706 57.658)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63118fa4-8195-4367-ada2-e2850ef8ec77")
+	)
+	(wire
+		(pts
+			(xy 187.706 57.658) (xy 201.168 57.658)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "656ce3d5-ef8d-421b-b3e8-610639f2a35b")
+	)
+	(wire
+		(pts
+			(xy 239.522 87.884) (xy 239.522 93.726)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "658ab81b-3b4e-49ee-b6c2-d09832ff534f")
+	)
+	(wire
+		(pts
+			(xy 218.694 63.754) (xy 218.694 86.106)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65c689b4-a4ae-4937-85f5-bcccf6eaf8ce")
+	)
+	(wire
+		(pts
+			(xy 235.712 108.966) (xy 247.65 108.966)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67bc48bb-6060-4d43-a8b4-b7b94216fa34")
+	)
+	(wire
+		(pts
+			(xy 269.24 77.724) (xy 265.176 77.724)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69d38e4e-2e2f-4ff9-831e-7dfc22502ab4")
+	)
+	(wire
+		(pts
+			(xy 269.24 85.852) (xy 278.13 85.852)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69d96aa6-8201-47d8-8581-390013a16834")
+	)
+	(wire
+		(pts
+			(xy 189.992 77.978) (xy 189.992 78.994)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c6e8698-3f8e-438f-aea2-662c58ab27a4")
+	)
+	(wire
+		(pts
+			(xy 161.544 94.234) (xy 165.608 94.234)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75cd91f7-200d-4cfc-a286-89714138697e")
+	)
+	(wire
+		(pts
+			(xy 239.522 103.886) (xy 237.236 103.886)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7890b1c6-c76a-4563-8ffa-a15953631ba9")
+	)
+	(wire
+		(pts
+			(xy 260.096 69.596) (xy 264.16 69.596)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79051f73-7b26-4bd9-8eba-86f40f089c8b")
+	)
+	(wire
+		(pts
+			(xy 177.292 45.974) (xy 206.248 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a327a89-72ea-4f7f-b0c4-c3d61283af98")
+	)
+	(wire
+		(pts
+			(xy 230.632 98.806) (xy 232.156 98.806)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ba0f2aa-ccaf-4e8c-81c8-dab24fc98ef0")
+	)
+	(wire
+		(pts
+			(xy 177.292 67.056) (xy 187.706 67.056)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cf5225a-f63a-49c3-8c57-0dd019d70bda")
+	)
+	(wire
+		(pts
+			(xy 161.544 89.154) (xy 161.544 94.234)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "813d8364-0e00-425f-8663-535b4a0fb024")
+	)
+	(wire
+		(pts
+			(xy 155.956 120.142) (xy 161.544 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8517bed6-0db7-4f3a-95ee-b1a80cd4ece7")
+	)
+	(wire
+		(pts
+			(xy 230.632 103.886) (xy 230.632 98.806)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "862dd678-99f2-4fa6-8d50-6ef970779830")
+	)
+	(wire
+		(pts
+			(xy 239.522 93.726) (xy 247.65 93.726)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "868845f4-afd1-4b30-aebf-e1c5e2b40410")
+	)
+	(wire
+		(pts
+			(xy 239.522 63.754) (xy 247.65 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86ecc11c-10d5-468e-8ac2-35eb1cebd0b6")
+	)
+	(wire
+		(pts
+			(xy 166.624 102.108) (xy 170.688 102.108)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "886a68a2-4d60-4a3c-8b6d-be830fb60cf3")
+	)
+	(wire
+		(pts
+			(xy 269.24 85.852) (xy 260.096 85.852)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c850bf5-c990-4d4f-9483-98bcb621909c")
+	)
+	(wire
+		(pts
+			(xy 206.248 90.932) (xy 206.248 96.266)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e52ab1a-9426-4bbb-b30b-08e065dd8bba")
+	)
+	(wire
+		(pts
+			(xy 170.688 45.974) (xy 177.292 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9125220d-6684-4649-96fe-8d4e908c8111")
+	)
+	(wire
+		(pts
+			(xy 161.544 115.316) (xy 161.544 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92999d60-6bb5-49e7-9fc0-14add93d0e00")
+	)
+	(wire
+		(pts
+			(xy 269.24 120.142) (xy 247.65 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92f9dc53-1054-4bd3-bf21-337c98809d19")
+	)
+	(wire
+		(pts
+			(xy 247.65 93.726) (xy 247.65 98.806)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9516151b-bad6-4b88-86c7-d8ccf11493a7")
+	)
+	(wire
+		(pts
+			(xy 269.24 77.724) (xy 269.24 80.264)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95d8b5f3-bd81-4b50-88fb-e9406fb324ab")
+	)
+	(wire
+		(pts
+			(xy 161.544 107.95) (xy 161.544 110.236)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99e7cda3-4ab3-4b2e-a4f6-f4c880169629")
+	)
+	(wire
+		(pts
+			(xy 260.096 85.852) (xy 260.096 82.804)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b77315d-6d9b-4426-878d-f46424eddeff")
+	)
+	(wire
+		(pts
+			(xy 239.522 78.486) (xy 242.57 78.486)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cf23e38-0a7f-450d-8206-adc0d5c2391b")
+	)
+	(wire
+		(pts
+			(xy 247.65 115.316) (xy 247.65 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fca97df-6dee-49b3-b275-6cca795ea0b3")
+	)
+	(wire
+		(pts
+			(xy 218.694 94.996) (xy 218.694 96.266)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a56e4ebb-80e0-45eb-a6db-624a75033c13")
+	)
+	(wire
+		(pts
+			(xy 239.522 93.726) (xy 237.236 93.726)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a918c7d0-6aa6-4286-ac49-bc37f95ab762")
+	)
+	(wire
+		(pts
+			(xy 223.774 57.658) (xy 225.806 57.658)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aca7e532-851d-47bd-9512-026455b62a43")
+	)
+	(wire
+		(pts
+			(xy 247.65 45.974) (xy 269.24 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0ce7936-4479-456b-9d03-ad81ea1c3931")
+	)
+	(wire
+		(pts
+			(xy 206.248 120.142) (xy 218.694 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3073b31-686c-4db2-af9d-0ad5ac6b7659")
+	)
+	(wire
+		(pts
+			(xy 247.65 45.974) (xy 247.65 52.578)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3dabc24-bc7b-411b-b99f-c1555f28be1a")
+	)
+	(wire
+		(pts
+			(xy 247.65 69.596) (xy 260.096 69.596)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3df51e1-63ae-4b57-b503-3261b1f6c456")
+	)
+	(wire
+		(pts
+			(xy 269.24 85.344) (xy 269.24 85.852)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5a736c9-70fa-4d91-b608-418699a206d6")
+	)
+	(wire
+		(pts
+			(xy 161.544 94.234) (xy 161.544 97.028)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bae332d4-53b7-40c7-a300-e21c361f36fa")
+	)
+	(wire
+		(pts
+			(xy 206.248 90.932) (xy 206.248 62.738)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb89a8a5-e7b2-4a9a-bc51-576cb23de658")
+	)
+	(wire
+		(pts
+			(xy 189.992 107.95) (xy 189.992 109.982)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd36be49-fdb1-4d0f-a233-a7a8ddd950d8")
+	)
+	(wire
+		(pts
+			(xy 177.292 45.974) (xy 177.292 52.578)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfb1703e-738d-4e2a-9ba4-e78bf6d7dc89")
+	)
+	(wire
+		(pts
+			(xy 170.688 120.142) (xy 170.688 115.316)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7063ad4-3440-449a-ab50-aeddd7370bbf")
+	)
+	(wire
+		(pts
+			(xy 225.806 57.658) (xy 242.57 57.658)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c833f29a-69cd-4ee5-baa5-17e0d8dd6d53")
+	)
+	(wire
+		(pts
+			(xy 247.65 108.966) (xy 247.65 110.236)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9f85ace-1357-4ff7-8d62-e7e7aaa1b9f5")
+	)
+	(wire
+		(pts
+			(xy 218.694 52.578) (xy 218.694 45.974)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb843a35-294c-4608-a4f1-607a7c4adb8b")
+	)
+	(wire
+		(pts
+			(xy 247.65 63.754) (xy 247.65 69.596)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc183c16-617d-4b13-895b-9f5e182ca249")
+	)
+	(wire
+		(pts
+			(xy 161.544 77.978) (xy 161.544 78.994)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdb84f4f-f8d7-43ed-b7ec-d7aa7e2bc14c")
+	)
+	(wire
+		(pts
+			(xy 239.522 73.406) (xy 239.522 78.486)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdf10826-0d3a-40ac-81eb-d442cdead4db")
+	)
+	(wire
+		(pts
+			(xy 161.544 67.056) (xy 177.292 67.056)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce2024bb-2f2b-485f-8d05-f8e28576e573")
+	)
+	(wire
+		(pts
+			(xy 230.632 120.142) (xy 239.522 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d500a127-f47e-42ac-b967-eb8d8e6f380c")
+	)
+	(wire
+		(pts
+			(xy 269.24 91.44) (xy 269.24 93.726)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5af838a-c08e-41af-9d5e-95148cf0db3d")
+	)
+	(wire
+		(pts
+			(xy 212.852 94.996) (xy 218.694 94.996)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6c50ec9-9e7b-4803-b486-f9745b8dbb44")
+	)
+	(wire
+		(pts
+			(xy 189.992 107.188) (xy 189.992 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6e30fe2-a41e-4892-a0fb-c3203f60a879")
+	)
+	(wire
+		(pts
+			(xy 177.292 84.074) (xy 177.292 90.932)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1148dfa-d89a-463e-896f-62471cb34e02")
+	)
+	(wire
+		(pts
+			(xy 206.248 106.426) (xy 206.248 109.982)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1d2943d-05e7-4bd8-a116-92084cbdc77b")
+	)
+	(wire
+		(pts
+			(xy 161.544 120.142) (xy 170.688 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e22b092e-33e2-43dd-a1ca-a7cc5365b8a4")
+	)
+	(wire
+		(pts
+			(xy 170.688 120.142) (xy 189.992 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2e8e398-82d5-443e-b186-65b8429a6751")
+	)
+	(wire
+		(pts
+			(xy 230.632 79.502) (xy 230.632 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e390b7c4-a470-40e4-b2ba-172824c027ba")
+	)
+	(wire
+		(pts
+			(xy 269.24 74.676) (xy 269.24 77.724)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3b119ed-1787-4110-b613-2cb00ad3111c")
+	)
+	(wire
+		(pts
+			(xy 189.992 92.71) (xy 230.632 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5995409-d41f-4182-be65-8f9c9c0bc9a7")
+	)
+	(wire
+		(pts
+			(xy 189.992 92.71) (xy 189.992 97.028)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8487530-e5c5-4f0a-b559-b3790a497a61")
+	)
+	(wire
+		(pts
+			(xy 230.632 114.046) (xy 230.632 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8a40a64-7d73-4948-903d-11724addd4f0")
+	)
+	(wire
+		(pts
+			(xy 239.522 78.486) (xy 239.522 82.804)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e97e036e-4053-4578-9b46-dea8f2afc7fb")
+	)
+	(wire
+		(pts
+			(xy 212.852 101.346) (xy 213.614 101.346)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9873a6f-1c9c-445f-98c8-a560e65894fa")
+	)
+	(wire
+		(pts
+			(xy 239.522 63.754) (xy 239.522 68.326)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea23ca40-a91d-4f01-88d1-1ab0c8d46649")
+	)
+	(wire
+		(pts
+			(xy 230.632 92.71) (xy 230.632 98.806)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecd474c9-09dc-4087-a51d-e72494aa090e")
+	)
+	(wire
+		(pts
+			(xy 239.522 115.316) (xy 239.522 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed412521-2037-4675-9477-b2650a9f75d3")
+	)
+	(wire
+		(pts
+			(xy 225.806 57.658) (xy 225.806 63.754)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edeb9fa3-a806-474b-9d9a-91679af9eae6")
+	)
+	(wire
+		(pts
+			(xy 212.852 101.346) (xy 212.852 94.996)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0fc93a0-8598-4cfe-8753-892bbe193547")
+	)
+	(wire
+		(pts
+			(xy 239.522 120.142) (xy 247.65 120.142)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5e4cc87-fa06-4093-9831-774269857724")
+	)
+	(wire
+		(pts
+			(xy 218.694 91.186) (xy 218.694 94.996)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7c26d72-f7e1-4c5e-b9d6-4bfe637ec2ed")
+	)
+	(wire
+		(pts
+			(xy 159.766 107.95) (xy 161.544 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7068ce-caa9-4f20-9bac-3febe7cce43a")
+	)
+	(wire
+		(pts
+			(xy 211.328 101.346) (xy 212.852 101.346)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd6168b8-bfdd-4589-9504-9546cd6b9f5d")
+	)
+	(global_label "O2"
+		(shape input)
+		(at 192.278 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "37930d1c-8ca4-4158-9d18-0048e5479495")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 197.2311 107.8706 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Vcc"
+		(shape input)
+		(at 156.464 45.974 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "53e8fc11-482e-43c6-ba7b-b1961beb0c8b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 150.7852 45.8946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Ninv"
+		(shape input)
+		(at 154.432 72.898 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "64267f58-4218-43f8-bf41-3bc334c73e0a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.967 72.8186 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Vee"
+		(shape input)
+		(at 155.956 120.142 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9832eff7-d547-45fa-a249-3cc43f38b030")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 150.2772 120.0626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "O1"
+		(shape input)
+		(at 159.766 107.95 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a9bf38e2-28fa-4ab9-91bf-f3669069abb7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 154.8129 107.8706 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Inv"
+		(shape input)
+		(at 196.85 72.898 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dbd43dcf-860e-4d35-a35b-a2abf0b62de6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 201.9845 72.8186 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Out"
+		(shape input)
+		(at 278.13 85.852 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "edcd5200-60f2-4502-85bb-bff390939fb0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 283.7483 85.7726 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 230.632 76.962 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07ff27de-7842-4593-a41e-fb30bec479d5")
+		(property "Reference" "C1"
+			(at 233.934 75.6982 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "30p"
+			(at 233.934 78.2382 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 230.632 76.962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 230.632 76.962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 230.632 76.962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "45797430-7d0f-4c41-b04e-cc678b75c999")
+		)
+		(pin "2"
+			(uuid "d84c3f88-b16f-4a74-b17a-7d4399539ec6")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV62")
+		(at 182.372 57.658 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "104f533a-3325-418d-9f39-7ccd73ee2799")
+		(property "Reference" "Q8"
+			(at 176.784 56.642 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN"
+			(at 176.784 59.0551 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.372 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.912 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 182.372 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 182.372 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PN"
+			(at 182.372 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "688fb68b-9a63-42ec-8e13-07f37aee4900")
+		)
+		(pin "1"
+			(uuid "a3bac6cb-4fd7-4d23-9b7e-bd2fd122f1ca")
+		)
+		(pin "3"
+			(uuid "bdd3ea5b-e4ba-4721-9ea0-e5431eb0eabc")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 165.608 94.234 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18ad3285-c91e-4072-a13c-7a6064430205")
+		(property "Reference" "Q7"
+			(at 171.704 92.9639 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 171.704 95.5039 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.608 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.068 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.608 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 165.608 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 165.608 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1d4ec0b8-dc28-42fd-aeea-4b0aaf898b0d")
+		)
+		(pin "2"
+			(uuid "9caeef51-db67-4ae7-b8e8-d15778b70c89")
+		)
+		(pin "3"
+			(uuid "f23d8d7c-6c68-4f46-a29e-b7811a225b5e")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 235.712 108.966 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a0e0baa-05aa-4d63-add9-6d909aad7b9b")
+		(property "Reference" "Q22"
+			(at 228.854 107.6959 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 228.854 110.2359 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 235.712 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.252 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 235.712 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 235.712 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 235.712 108.966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec6bf53d-b8b1-405b-b15c-023653a6fc84")
+		)
+		(pin "2"
+			(uuid "316adeb5-fa6e-4593-a3ad-87039a98cb8b")
+		)
+		(pin "3"
+			(uuid "9f7de00d-38fb-4dc2-92f4-eea87e61f6c5")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 242.57 78.486 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1e82dc64-e6ab-48a2-bdab-0c5836a0738f")
+		(property "Reference" "Q16"
+			(at 249.174 77.2159 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 249.174 79.7559 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 242.57 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 242.57 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e4976905-a5d5-4d69-9b3e-d648a3224d42")
+		)
+		(pin "2"
+			(uuid "4b2a1903-2d65-4c83-a4b6-22e84246f762")
+		)
+		(pin "3"
+			(uuid "31f504ea-fdca-4fc1-b6ac-02bbd6c48c7f")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV62")
+		(at 184.912 84.074 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2e01c6e6-05d9-4172-80c4-96db1278074f")
+		(property "Reference" "Q4"
+			(at 191.516 83.1849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN"
+			(at 191.516 85.598 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.912 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.372 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.912 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 184.912 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PN"
+			(at 184.912 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8de49fed-9138-48c9-a583-27a5c00c91ab")
+		)
+		(pin "1"
+			(uuid "8d064e57-ba8a-46ca-88ba-17cf7ce56483")
+		)
+		(pin "3"
+			(uuid "626f54c5-538b-4c57-97a3-8de15dec2df1")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 242.57 103.886 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e1ce602-69c2-446d-9b2e-0e531ff13353")
+		(property "Reference" "Q19"
+			(at 248.92 102.6159 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 248.92 105.1559 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 103.886 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 103.886 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 103.886 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 242.57 103.886 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 242.57 103.886 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2f28c228-0eb6-412c-8ac1-2a665d3e64fd")
+		)
+		(pin "2"
+			(uuid "3dfcc294-a5c1-4090-b0f2-787a2a8fdbd8")
+		)
+		(pin "3"
+			(uuid "66840e57-c767-4ddb-ba8e-0a36215da638")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV62")
+		(at 264.16 98.806 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "51be7496-ae98-4eb4-a0d9-dc37dff84ed3")
+		(property "Reference" "Q20"
+			(at 269.748 97.536 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN"
+			(at 269.748 100.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 264.16 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PN"
+			(at 264.16 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6285b00a-c94f-4e44-8437-f67578bd4079")
+		)
+		(pin "1"
+			(uuid "f983bced-3036-44ed-a23e-c7bd9d53c6a4")
+		)
+		(pin "3"
+			(uuid "0c21f0cb-9d0b-4b1b-b162-ee95cecc0a71")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 156.464 72.898 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ab8cc81-3d45-4ea8-bbae-726e484bdf7d")
+		(property "Reference" "Q1"
+			(at 162.814 71.6279 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 162.814 74.1679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.464 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.924 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 156.464 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 156.464 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 156.464 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51f63153-f82e-4667-9f5b-efa1a26e2c96")
+		)
+		(pin "2"
+			(uuid "834f363c-4fc2-47fd-a333-abef404562db")
+		)
+		(pin "3"
+			(uuid "1d4f2b85-1340-42d7-9c77-ad158754bcec")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 170.688 112.776 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69e383dd-623b-4caf-80c9-6cd28e567488")
+		(property "Reference" "R2"
+			(at 172.72 111.5059 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "50k"
+			(at 172.72 114.0459 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.688 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.688 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.688 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55efaed8-e494-4641-9a6a-4c75c429f262")
+		)
+		(pin "2"
+			(uuid "2103e5ee-5f84-4a02-b281-1f5b27f6f0fc")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 239.522 112.776 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bf82658-781b-4102-b10f-fe083a557c6e")
+		(property "Reference" "R8"
+			(at 241.046 111.506 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "50k"
+			(at 241.046 114.046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 239.522 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 239.522 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 239.522 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "980b69e0-6ec8-493a-8be5-26b660052703")
+		)
+		(pin "2"
+			(uuid "eb7ecb18-b4ef-4920-93ad-ca1e93f8e296")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 265.176 77.724 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71481195-a53e-466e-881a-10f4e532dd9a")
+		(property "Reference" "Q17"
+			(at 259.334 76.4539 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 259.334 78.9939 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 265.176 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 267.716 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 265.176 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 265.176 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 265.176 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eef166d1-0e08-4870-905b-1d06ae48d2d1")
+		)
+		(pin "2"
+			(uuid "7c78728f-4c20-47e0-944e-5e4b213d6e2b")
+		)
+		(pin "3"
+			(uuid "5b234449-e79e-44ee-90cc-3ae11ac00c4a")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV62")
+		(at 223.774 57.658 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "97135558-0230-4702-9922-1cb9349a231e")
+		(property "Reference" "Q12"
+			(at 218.186 56.642 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN"
+			(at 218.186 59.0551 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.774 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.314 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 223.774 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 223.774 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PN"
+			(at 223.774 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e236c701-5539-4973-96c4-bab25dfff2d3")
+		)
+		(pin "1"
+			(uuid "402bbba6-5a6b-4f9e-8a8b-6417f3960fb8")
+		)
+		(pin "3"
+			(uuid "be4a0c05-9ccb-49ea-882a-e8cbe738d9a8")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 232.156 98.806 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "98c95237-315c-4743-bd26-aa63210a48c7")
+		(property "Reference" "Q15"
+			(at 241.3 97.5359 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 241.3 100.0759 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.156 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 229.616 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 232.156 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 232.156 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 232.156 98.806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "15986f79-65f9-4027-be56-8aecc60594e1")
+		)
+		(pin "2"
+			(uuid "132b43bf-a35a-473d-a2ca-f778ad9001c8")
+		)
+		(pin "3"
+			(uuid "a5ff48ac-fa4c-416c-a169-3ef8f5d4adb4")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 269.24 82.804 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98f32f1a-e87c-460b-8e45-be1df3f5b10d")
+		(property "Reference" "R10"
+			(at 270.764 81.5339 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "25"
+			(at 270.764 84.0739 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 82.804 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 269.24 82.804 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 269.24 82.804 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a01018b-449b-47f8-a4f5-74c79aad04f6")
+		)
+		(pin "2"
+			(uuid "74103f68-5663-4e28-babe-d1a057536523")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 195.072 72.898 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e143d40-d7b5-48d0-b15a-fb424adefe83")
+		(property "Reference" "Q2"
+			(at 188.214 71.6279 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 188.214 74.1679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 195.072 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 197.612 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 195.072 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 195.072 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 195.072 72.898 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3feb64a7-0403-436c-a2f3-3ede53c0917e")
+		)
+		(pin "2"
+			(uuid "bd98fb99-3fcd-432c-b637-0ea4a86baadc")
+		)
+		(pin "3"
+			(uuid "5d45210d-f07d-4d5f-b7b6-ec9a59d37936")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 239.522 85.344 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9e2610d1-c9ff-48f1-8889-587345b6e47a")
+		(property "Reference" "R7"
+			(at 241.3 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "7.5k"
+			(at 241.3 86.614 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 239.522 85.344 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 239.522 85.344 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 239.522 85.344 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "763944b8-6571-4330-a87a-3f3933cf4705")
+		)
+		(pin "2"
+			(uuid "fa4ab640-8894-4d5c-a108-94942d949ee2")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 218.694 88.646 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1e32ceb-443a-4707-9100-8b22eecae857")
+		(property "Reference" "R5"
+			(at 221.234 87.3759 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "39k"
+			(at 221.234 89.9159 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.694 88.646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 218.694 88.646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.694 88.646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db9129c4-e5b5-4da7-857e-5ffaa0a0b394")
+		)
+		(pin "2"
+			(uuid "51edf30f-3406-4d51-af26-d5701be64402")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 247.65 112.776 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1daf1ac-0933-45b4-a86c-dd2d439db4b3")
+		(property "Reference" "R9"
+			(at 250.19 111.5059 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "50"
+			(at 250.19 114.0459 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 247.65 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "79935b43-cac0-460e-9c7d-f028576b9ba1")
+		)
+		(pin "2"
+			(uuid "0a712ed5-3c7f-47d9-9f5b-46fa049a4895")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV62")
+		(at 166.624 84.074 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bcf35ca7-1b09-4857-b587-213c92100b13")
+		(property "Reference" "Q3"
+			(at 160.02 83.1849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN"
+			(at 160.02 85.598 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.624 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 169.164 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 166.624 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 166.624 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PN"
+			(at 166.624 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "24b0c49f-719e-4bdc-a4b9-3f7e3e6acbd6")
+		)
+		(pin "1"
+			(uuid "b28b0e30-97bb-4c01-89c6-4abb3889ad55")
+		)
+		(pin "3"
+			(uuid "6ffd1a9c-0d78-48cc-bc35-52fcbc04d4e4")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 189.992 112.522 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0f34f69-a819-462f-8e75-da1a416f1448")
+		(property "Reference" "R3"
+			(at 192.024 111.2519 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 192.024 113.7919 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 189.992 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 189.992 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 189.992 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "16d65e53-fb42-4897-920c-736dfbeaa82a")
+		)
+		(pin "2"
+			(uuid "60c168ef-9b4b-4be1-bb74-2a8a2b2d69b9")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 213.614 101.346 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c316760b-21d3-4c0e-a7ea-e45081e462b0")
+		(property "Reference" "Q11"
+			(at 219.964 100.0759 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 219.964 102.6159 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 213.614 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 211.074 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 213.614 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 213.614 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 213.614 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b108010b-63a4-4ba9-acc7-c9c43f06bc61")
+		)
+		(pin "2"
+			(uuid "07365e7e-de1a-471c-a993-f3bfc5676d6d")
+		)
+		(pin "3"
+			(uuid "334808bc-bac5-4a03-bfdf-02e8dde459db")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 239.522 70.866 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c6a76d8c-afb7-4564-a10c-956565efae0b")
+		(property "Reference" "R6"
+			(at 241.3 69.596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.5k"
+			(at 241.3 72.136 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 239.522 70.866 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 239.522 70.866 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 239.522 70.866 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb7cd0c1-54c1-4f7e-a5d2-0e9188edb5e1")
+		)
+		(pin "2"
+			(uuid "1725e7cf-2f6b-4b0a-8535-fd2e6e6c8845")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 264.16 69.596 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cb3d95bc-3fa0-476d-8853-4d0c2a9d176f")
+		(property "Reference" "Q14"
+			(at 270.764 68.3259 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 270.764 70.8659 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 69.596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 69.596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 69.596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 264.16 69.596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 264.16 69.596 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bed92b66-f774-46b9-afc7-7bff6f91c085")
+		)
+		(pin "2"
+			(uuid "b6d74837-10ad-46c3-a183-80d131d9b5ec")
+		)
+		(pin "3"
+			(uuid "6068b66d-91cb-4369-8c8b-4ff804f0d77e")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 269.24 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ddcdeb15-4626-4b8f-8224-740d1e382d8f")
+		(property "Reference" "R11"
+			(at 271.78 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "50"
+			(at 271.78 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 269.24 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 269.24 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7101c486-2bb7-4a48-b616-8f82635c8ea1")
+		)
+		(pin "2"
+			(uuid "8709f3bb-0618-429a-be11-92049f41afde")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 161.544 112.776 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e271069b-3399-4237-9f36-76d957567ded")
+		(property "Reference" "R1"
+			(at 164.084 111.5059 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 164.084 114.0459 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 161.544 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.544 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 161.544 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b30bdf44-69fa-4c97-9b10-6415969ff9e8")
+		)
+		(pin "2"
+			(uuid "e4a3776e-fb21-4ecb-a18f-5f5811cfa079")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 166.624 102.108 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0f4ee87-5a3b-4f5f-98d0-ccaf24c62a9e")
+		(property "Reference" "Q5"
+			(at 160.274 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 160.274 103.3779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.624 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 169.164 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 166.624 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 166.624 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 166.624 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1328f84d-c8ff-47e4-bc79-9c35a26e096b")
+		)
+		(pin "2"
+			(uuid "6cc644fa-fc21-4b49-9b97-717744ae1099")
+		)
+		(pin "3"
+			(uuid "f989c3c6-64a0-4c74-91ce-0fc4a5087289")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 206.248 112.522 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f26abfb1-02b4-4789-acf9-dce5a629682b")
+		(property "Reference" "R4"
+			(at 208.534 111.2519 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5k"
+			(at 208.534 113.7919 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 206.248 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 206.248 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 206.248 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd548bf1-7b21-4029-a2b0-dada7af795cd")
+		)
+		(pin "2"
+			(uuid "7c26b733-7e69-47f3-bec7-8bebfbf4195d")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 184.912 102.108 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f483d622-0a44-4b9d-925f-0443bcf91fda")
+		(property "Reference" "Q6"
+			(at 190.754 100.8379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 190.754 103.3779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.912 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.372 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.912 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 184.912 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 184.912 102.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4512b075-dcf7-4ffb-b0b5-2f7a4b24be54")
+		)
+		(pin "2"
+			(uuid "dc0d22a8-b55d-462a-bf53-3c0dd4866f09")
+		)
+		(pin "3"
+			(uuid "ad73c46e-cca9-4da5-bc69-5c2cae82d3b6")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV61")
+		(at 211.328 101.346 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f4abd417-1a5f-4784-ad7d-02c7b50f1c51")
+		(property "Reference" "Q10"
+			(at 204.724 100.0759 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NP"
+			(at 204.724 102.6159 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 211.328 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.868 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 211.328 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 211.328 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "NP"
+			(at 211.328 101.346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53203d3c-e48e-44d0-92cb-82be352d0af3")
+		)
+		(pin "2"
+			(uuid "7234de71-9e18-423e-8d37-67c289257c37")
+		)
+		(pin "3"
+			(uuid "14d6b234-1ce1-4369-9b71-c71b4261858a")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV62")
+		(at 242.57 57.658 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f8ba2620-f56e-4665-8855-c4832ae6fbb0")
+		(property "Reference" "Q13"
+			(at 248.158 56.388 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN"
+			(at 248.158 58.928 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 242.57 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PN"
+			(at 242.57 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b761b107-a5d8-4e19-bb00-d98a4a10c80d")
+		)
+		(pin "1"
+			(uuid "6066e5cf-0e99-4cbf-90e8-5a3a94ab95c5")
+		)
+		(pin "3"
+			(uuid "840c9491-a857-4b1e-beea-7adeb2f01cc0")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BCV62")
+		(at 201.168 57.658 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ffc6a2da-92a2-4690-a8c3-a549f7960980")
+		(property "Reference" "Q9"
+			(at 206.756 56.388 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN"
+			(at 206.756 58.928 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.168 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.628 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 201.168 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "bipmod.lib"
+			(at 201.168 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PN"
+			(at 201.168 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a92a95fb-5ef7-4d1b-ba03-81449c7419c5")
+		)
+		(pin "1"
+			(uuid "52177058-27d6-4027-859c-edc9250608c6")
+		)
+		(pin "3"
+			(uuid "0c22be50-a85b-4311-aa0d-d5463bd5a7b5")
+		)
+		(instances
+			(project "741_subckt"
+				(path "/35461762-06be-4c9e-bf12-e38db35c4dcf"
+					(reference "Q9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

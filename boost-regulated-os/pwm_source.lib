@@ -1,0 +1,26 @@
+* PWM idea with one-shot from 
+* https://www.thequantizer.com/tutorials/dac-and-pwm-kicad-simulation/
+.subckt pwm_source  cntl_in gnd out gnd params: freq=1.1Meg  vlo=0.7 vhi=3.5
+*****************************************************************
+* freq = frequency of internal oscillator
+*****************************************************************
+ain clk cntl_in 0 out pulse2
+*****************************************************************
+* create output by sampeling the control signal every positive
+* edge of the clk and firing a square with a width determined by the 
+* the controlling input voltage: 
+* vin <= 0.01 then width = 0.01/freq (duty cycle 0.01); 
+* 0.01 < vin < 0.99 then width = vin/freq (duty cycle = vin)
+* vi >= 0.99 width = 0.99/freq (duty cycle 0.99)
+*****************************************************************
+.model pulse2 oneshot(cntl_array = [0 0.01 0.99 1.0]
++                     pw_array=[{0.01/freq} {0.01/freq} {0.99/freq} {0.99/freq}]
++                     clk_trig = 0.5 pos_edge_trig = TRUE
++                     out_low = {vlo} out_high = {vhi}
++                     rise_delay = 2.0e-9 fall_delay = 2.0e-9)
+*****************************************************************
+* create clock signal
+*****************************************************************
+Vclk clk gnd dc 0 pulse(0 1 10n 10n 10n {1/(freq*2)} {1/freq})
+*****************************************************************
+.ends

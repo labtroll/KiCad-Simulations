@@ -1,0 +1,19 @@
+* Audio-PWM with input frequency 1200k, variable duty cycle 1% to 99%
+* Input control range -1V to 1V
+.subckt audiopwm outp outn in+ in- params: freq=100k outlow=0 outhigh=1
+apwm %vd in+ in- dout pwm
+.model pwm d_pwm(
++ frequency = {freq}
++ cntl_array = [-1 -0.99 0.99 1]
++ dc_array = [0.01 0.01 0.99 0.99]
++ init_phase = 90
++ rise_delay = 20e-9 fall_delay = 20e-9)
+
+* D to A including inverted output
+aout [~dout dout] [outn outp] dac1
+
+.model dac1 dac_bridge(out_low = {outlow} out_high = {outhigh} out_undef = 0
++ input_load = 5.0e-12 t_rise = 20e-9
++ t_fall = 20e-9)
+
+.ends
