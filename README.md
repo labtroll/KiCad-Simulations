@@ -129,7 +129,7 @@ See [ibis-test](ibis-test)
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/08610ea2-7bf9-433f-bf8d-27cc991c27f2)
 
 
-**IMG**
+## IMG
 
 ## Amplifier with controlled gain
 using the TI TCA810.
@@ -183,15 +183,86 @@ and some output of a transient simulation
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/52b569b4-c599-4c74-8676-12d288b192ca)
 
 
-## Some more circuits from my previous post, here now tested/updated for KiCad 7.99
+# More circuits from previous post, here now tested/updated for KiCad 7.99
 
 :exclamation: Add title and description/images from original post(s)
 
-* See [Q17](Q17)
-* See [LM3886-Tian](LM3886-Tian)
-* See [rel_osc](rel_osc)
-* See [bip-osc-2](bip-osc-2)
-* See [CMOS555_4](CMOS555_4)
-* See [PassLabsF5](PassLabsF5)
-* See [FullBridge](FullBridge)
-* See [741](741)
+## Integrated linear amp (LM3886), simple, real, Tian Probe
+
+See [LM3886_simple](LM3886_simple)
+
+See [LM3886](LM3886)
+
+See [LM3886-Tian](LM3886-Tian)
+
+IMG LM3886_complete_circuit
+
+The Tian probe may be used for a stability analysis of the feedback amplifier. More info is available in the attached project, file Tian.readme.
+
+
+## Pass Labs F5 Class A Audio Amplifier
+
+See [PassLabsF5](PassLabsF5)
+
+IMG PassLabsF5_circuit
+
+Information on this amplifier stems from https://www.firstwatt.com/pdf/art_f5_turbo.pdf, and there are extensive threads how to build it at https://www.diyaudio.com/community/threads/f5-turbo-builders-thread.207103/ and https://www.diyaudio.com/community/threads/f5turbo-illustrated-build-guide.254056/ . Electro-thermal simulation is used, as not only electrical signals are considered, but also self-heating of the power transistors and their cooling by heat sinks. 
+
+
+## Simple VDMOS Audio Amplifier
+
+See [Dual-NMOS-Amp-VDMOS](Dual-NMOS-Amp-VDMOS)
+
+
+IMG Dual_VDMOS_Circuit
+
+
+
+## VDMOS Audio Amplifier with OpAmp, Optional Tian Probe
+
+See [MOSAMP_VDMOS_601](MOSAMP_VDMOS_601)
+
+See [MOSAMP_VDMOS_601-TIAN](MOSAMP_VDMOS_601-TIAN)
+
+IMG MOSAMP_VDMOS_601-Tian-circuit
+
+## A bipolar 741 operational amplifier
+Including a desription and example how to generate a subcircuit model for the 741 with help of the Eeschema internal circuit.
+
+See [741](741)
+
+IMG 741_panorama
+
+
+
+
+## Sallen-Key-Bandpass Filter (Dual OpAmp)
+
+See [sallen_key-bandpass-072](sallen_key-bandpass-072)
+
+
+IMG Sallen-Key-Circuit
+
+
+
+## Q17, a redesign of the famous QUAD405 High-End Audio Amplifier, 
+made by Tiberiu Vicol (https://www.diyaudio.com/community/threads/q17-a-quad405-audiophile-approach-to-perfect-sound.374507/). He designed circuit and PCB with KiCad, I have modified his files to enable simulation with KiCad/ngspice.
+See [Q17](Q17)
+
+IMG Q17-circuit
+​ ​ 22  23 / 23 ​ ​
+See [Q17](Q17)
+
+See [LM3886-Tian](LM3886-Tian)
+
+See [rel_osc](rel_osc)
+
+See [bip-osc-2](bip-osc-2)
+
+See [CMOS555_4](CMOS555_4)
+
+See [PassLabsF5](PassLabsF5)
+
+See [FullBridge](FullBridge)
+
+See [741](741)
