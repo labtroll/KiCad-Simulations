@@ -6,4 +6,3 @@ The previous example has been a ‘free-running’ converter. Load-switching and
 The output load is switched at 13ms from 60 to 20 Ohms. The two cursors clearly show that the output voltage regulation is working.
 
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/5d3def61-7011-4751-9c2c-8d7811d70bc6)
-

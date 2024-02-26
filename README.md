@@ -124,12 +124,10 @@ Some "finger execises" in the new IBIS module are shown next. IBIS allows to sim
 
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/c76c178a-cc40-4502-80f4-f4b109f2441c)
 
-See [ibis-test](ibis-test)
-
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/08610ea2-7bf9-433f-bf8d-27cc991c27f2)
 
+See [ibis-test](ibis-test)
 
-## IMG
 
 ## Amplifier with controlled gain
 using the TI TCA810.
@@ -159,8 +157,6 @@ See [MAX9000](MAX9000)
 ## The venerable ICL8038
 THis project contains a new spice model for the ICL8038, some info how to create such a model from the circuit diagram in the data sheet, the project to create a subcircuit for the model and an example circuit.
 
-See [ICL8038](ICL8038)
-
 The model circuit
 [image](https://kicad-info.s3.dualstack.us-west-2.amazonaws.com/original/3X/0/e/0ea047b07c97f5ce2c888ac4456bb42f1e78ce44.png)
 
@@ -169,6 +165,9 @@ The example circuit
 
 The output, scaled
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/038ce876-6c1c-466e-ac86-df04aa73a349)
+
+See [ICL8038](ICL8038)
+
 
 ## Generating a negative voltage from a positive supply with LTC1044
 LTC1044.lib contains a new behavioral ngspice model. The project is
@@ -197,16 +196,17 @@ See [LM3886-Tian](LM3886-Tian)
 ## A bipolar 741 operational amplifier
 Including a desription and example how to generate a subcircuit model for the 741 with help of the Eeschema internal circuit.
 
-See [741](741)
-
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/dd9d5ccc-0837-4f5b-afff-cee75f2dd2e3)
+
+See [741](741)
 
 
 ## Q17, a redesign of the famous QUAD405 High-End Audio Amplifier, 
 made by Tiberiu Vicol (https://www.diyaudio.com/community/threads/q17-a-quad405-audiophile-approach-to-perfect-sound.374507/). He designed circuit and PCB with KiCad, I have modified his files to enable simulation with KiCad/ngspice.
-See [Q17](Q17)
 
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/040b5529-712d-443c-b6d0-863e76d1e2e6)
+
+See [Q17](Q17)
 
 
 ## rel_osc
