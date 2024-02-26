@@ -1,4 +1,4 @@
-# KiCad 8 Simulation Projects
+# KiCad 8.0 Simulation Projects
 
 The subfolders contain KiCad 7.99/8.0 projects with schematics containing ngspice simulations, created by [Holger Vogt](https://forum.kicad.info/u/holger), originally published in a [KiCad forum post](https://forum.kicad.info/t/more-simulation-examples-for-kicad-eeschema-ngspice/45546)
 
