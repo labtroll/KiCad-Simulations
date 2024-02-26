@@ -1,0 +1,33 @@
+********************************
+* Copyright:                   *
+* Vishay Intertechnology, Inc. *
+********************************
+* Technology: DISCRETE DIODE
+* Device: Diode 
+* Description:
+* Type: Typical (nom)
+* Model established: 20.08.2009, by Harald Stix, VSA/ASSP-VOE
+* Wafer:
+* Remarks:
+* Revision: 20.08.2009
+* Simulation Model: 
+* Simulator: PSPICE
+
+*DEVICE=GDZ16B,D
+
+* GDZ16B D model
+* updated using Model Editor release 9.1 on 08/20/09
+* Model Editor is an OrCAD product.
+.MODEL GDZ16B D
++ IS=4.2109E-15
++ N=1.0978
++ RS=.25816
++ IKF=5.2085
++ CJO=27.189E-12
++ M=.41666
++ VJ=.72879
++ ISR=3.8966E-9
++ NR=3.7407
++ BV=16.077
++ IBV=.10399
++ TT=455.12E-9

@@ -1,0 +1,18 @@
+.title KiCad schematic
+.include "D:/Spice_general/KiCad-799/CMOS555_4/1N4148.mod"
+.include "D:/Spice_general/KiCad-799/CMOS555_4/CMOS-555-subckt.lib"
+.save all
+C2 Net-_D1-K_ GND 12u
+C1 Net-_U1-CV_ GND 10n
+XU1 GND Net-_D1-K_ intout Vcc Net-_U1-CV_ Net-_D1-K_ Net-_D1-A_ Vcc CMOS555
+R2 Net-_D1-A_ Net-_D1-K_ 68k
+D1 Net-_D1-A_ Net-_D1-K_ D1N4148
+R1 Vcc Net-_D1-A_ 68k
+R3 intout intin 47k
+C3 Net-_U2-THR_ GND 120n
+XU2 GND Net-_U2-THR_ output Vcc intin Net-_U2-THR_ Net-_U2-DIS_ Vcc CMOS555
+V1 Net-_V1-Pad1_ GND DC 5 
+R4 Vcc Net-_U2-DIS_ 8.2k
+V2 Vcc Net-_V1-Pad1_ PULSE( 0 -1 10u 1u 1u 100u 100 ) 
+R5 Net-_U2-DIS_ Net-_U2-THR_ 8.2k
+.end

@@ -1,0 +1,32 @@
+.title KiCad schematic
+.include "D:/Spice_general/KiCad-799/LM3886-Tian/GDZ16B.lib"
+.include "D:/Spice_general/KiCad-799/LM3886-Tian/LM3886.lib"
+.include "D:/Spice_general/KiCad-799/LM3886-Tian/Loudspeaker.lib"
+.include "D:/Spice_general/KiCad-799/LM3886-Tian/Tian_subckt.lib"
+.tran 10u 1200m
+* for testing the 'MUTE' function:
+.ic v(/m1)=0
+*.ac dec 10 1 100k
+R2 Net-_U1-+_ Net-_C1-Pad1_ 1k
+C1 Net-_C1-Pad1_ IN 4.7u
+V1 IN GND dc 0 ac 0 sin(0 1 1k)
+C3 Net-_C3-Pad1_ GND 470u
+R3 Net-_U1--_ Net-_C3-Pad1_ 1k
+C2 Net-_U1-+_ GND 680p
+VP1 V+ GND DC 30 
+R1 Net-_C1-Pad1_ GND 20k
+VN1 V- GND DC -30 
+C5 /m1 GND 68u
+D1 /m1 /m2 GDZ16B
+L1 Net-_L1-Pad1_ OUT 0.7u
+R8 Net-_L1-Pad1_ OUT 10
+XU1 Net-_U1-+_ Net-_U1--_ V+ V- Net-_L1-Pad1_ /m2 lm3886
+R4 Net-_U1--_ Net-_R4-Pad2_ 20k
+R6 /m1 V- 10k
+X999 Net-_L1-Pad1_ Net-_R4-Pad2_ loopgainprobe
+XLS1 OUT GND DC50FA8
+C6 Net-_C6-Pad1_ GND 20n
+R7 Net-_L1-Pad1_ Net-_C6-Pad1_ 4.7
+C4 Net-_C4-Pad1_ Net-_U1--_ 50p
+R5 Net-_C4-Pad1_ Net-_R4-Pad2_ 20k
+.end

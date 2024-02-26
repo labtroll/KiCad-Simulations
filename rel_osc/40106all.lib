@@ -1,0 +1,10 @@
+* subcircuit for 40106 using all 6 gates
+.subckt 40106all in1 out1 in2 out2 in3 out3 vss out4 in4 out5 in5 out6 in6 vdd
+.include CD40106B.lib
+XU1a out1 in1 vdd vss CD40106B
+XU1b out2 in2 vdd vss CD40106B
+XU1c in3 out3 vdd vss CD40106B
+XU1d in4 out4 vdd vss CD40106B
+XU1e in5 out5 vdd vss CD40106B
+XU1f in6 out6 vdd vss CD40106B
+.ends

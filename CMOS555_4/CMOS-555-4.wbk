@@ -1,0 +1,66 @@
+{
+  "last_sch_text_sim_command": "",
+  "tabs": [
+    {
+      "analysis": "TRAN",
+      "commands": [
+        ".tran 100u 2",
+        ".kicad adjustpaths",
+        ".save all"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(output)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "v(intout)+6",
+          "trace_type": 257
+        }
+      ]
+    },
+    {
+      "analysis": "FFT",
+      "commands": [
+        "linearize V(output)\nfft V(output)",
+        ".kicad adjustpaths",
+        ".save all"
+      ],
+      "dottedSecondary": true,
+      "fixedY1scale": {
+        "max": 0.0,
+        "min": -100.0
+      },
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(output)",
+          "trace_type": 513
+        }
+      ]
+    }
+  ],
+  "user_defined_signals": [
+    "v(intout)+6"
+  ],
+  "version": 6
+}

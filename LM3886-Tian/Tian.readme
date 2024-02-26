@@ -1,0 +1,72 @@
+**** Tian Probe ***********
+provided by Robert Turnbull (see https://sourceforge.net/p/ngspice/feature-requests/34/?limit=25#49dd )
+Modified by H. Vogt, Jan 2022
+Three clause BSD license 
+
+Tian Probe is only available with external
+ngspice: File -> Export -> Netlist -> Spice 
+Then add path to external ngspice, e.g. C:\Spice64\bin\ngspice
+Start simulation by -> Create netlist and run simulator command
+
+For KiCad users (6.0.1 and newer): Add the Tianprobe2 to the circuit, cutting in the feedback loop.
+Copy the files Tian_subckt.lib and tian.kicad_sym to the project folder.
+If the project folder already contauns a file named sym-lib-table, add the line
+  (lib (name "tian")(type "KiCad")(uri "${KIPRJMOD}/tian.kicad_sym")(options "")(descr ""))
+If there is no file sym-lib-table, create such an empty file in the project folder and add
+the lines
+(sym_lib_table
+  (lib (name "tian")(type "KiCad")(uri "${KIPRJMOD}/tian.kicad_sym")(options "")(descr ""))
+)
+to it.
+
+The loopgainprobe subcircuit has been named X999 (fixed annotation). The appropriate subcircuit
+and .control section are contained in Tian_subckt.lib, its content is already attached as X999
+to the Tian symbol.
+
+The loopgainprobe can be disabled by setting both i.X999.Ii and v.X999.Vi to zero.
+
+The Tian Probe is compatible with .tran simulation, as shown in the example. However, if you want
+to do an .ac simulation, 
+
+tian_loop.lib was translated from Frank Wiedmann's LTspice LoopGainProbe.asc into the ngspice dialect
+For more information see: https://sites.google.com/site/frankwiedmann/loopgain
+and http://education.ingenazure.com/ac-stability-analysis-ngspice/
+
+Original literature:
+Michael Tian, V. Visvanathan, Jeffrey Hantgan, and Kenneth Kundert,
+   "Striving for Small-Signal Stability", IEEE Circuits and Devices Magazine,
+    vol. 17, no. 1, pp. 31-41, January 2001.
+https://kenkundert.com/docs/cd2001-01.pdf
+
+.subckt loopgainprobe a b
+Ii 0 x DC 0 AC 0
+Vi x a DC 0 AC 1
+Vnodebuffer b x 0
+.ends loopgainprobe
+
+This is the central function to calculate the Tian data from the two ac measurements:
+
+.func tian_loop() {1/(1-1/(2*(ac1.I(v.X999.Vi)*ac2.V(X999.x)-ac1.V(X999.x)*ac2.I(v.X999.Vi))+ac1.V(X999.x)+ac2.I(v.X999.Vi)))}
+
+* The following .control section performs the loop analysis and plots the results in standard ngspice
+.control
+pre_set noinit
+set controlswait
+if $?sharedmode
+  version -s
+  rusage time
+else
+  ac dec 100 1 10Meg
+  alter i.X999.ii acmag=1
+  alter v.X999.vi acmag=0
+  ac dec 100 1 10Meg
+  let tian_signal = tian_loop()
+  plot db(tian_signal)
+  let dbsignal =  db(tian_signal)
+  meas ac zerogainfreq WHEN dbsignal=0
+  plot 180*cph(tian_signal)/pi
+  let tphase = 180*cph(tian_signal)/pi
+  meas ac phaseatzerogain FIND tphase AT=zerogainfreq
+end
+
+.endc

@@ -1,0 +1,1 @@
+.MODEL IXTH80N20L VDMOS Nchan Vds=200 VTO=4 KP=15 Lambda=2m Mtriode=0.4 Ksubthres=150m Rs=5m Rd=10m Rds=200e6 Cgdmax=9000p Cgdmin=300p A=0.25 Cgs=5500p Cjo=11000p Is=10e-6 Rb=8m BV=200 IBV=250e-6 NBV=4 TT=250e-9

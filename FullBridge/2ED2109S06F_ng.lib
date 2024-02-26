@@ -1,0 +1,353 @@
+******************************************************************************
+*  Simulation model of 2ED2109S06F Level 1 for SIMetrix version 8.3g or higher
+*  Version: 01.04 (Revision: 423)
+*  (C) Copyright 2020 Infineon Technologies. All rights reserved. 
+*
+* Patched for ngspice by Holger Vogt, March 1st, 2022
+*
+******************************************************************************
+*  Model performance : 
+*  - Static Electrical Characteristics and Dynamic Electrical Characteristics 
+*    are modeled with the typical values from the datasheet.
+*  - Temperature effects are not modeled
+*
+*  The following features have been modeled :
+*  - Switching Characteristics such as propagation delay, peak currents
+*  - Undervoltage lockout 
+*  - Bootstrap diode
+*
+******************************************************************************
+* PINS:
+*  --------------------------------------------------------------------------
+*  | NAME | DESCRIPTION 
+*  --------------------------------------------------------------------------
+*  | LO   | Low side gate drive output 
+*  --------------------------------------------------------------------------
+*  | HO   | High side gate drive output 
+*  --------------------------------------------------------------------------
+*  | COM  | Low side return 
+*  --------------------------------------------------------------------------
+*  | IN   | Logic input for  gate driver output (HO), in phase with HO 
+*  --------------------------------------------------------------------------
+*  | VCC  | Low-side and logic supply voltage 
+*  --------------------------------------------------------------------------
+*  | VB   | High side floating supply 
+*  --------------------------------------------------------------------------
+*  | VS   | High side floating supply return 
+*  --------------------------------------------------------------------------
+*  | NSD  | Logic input for shut down, out of phase 
+*  --------------------------------------------------------------------------
+*
+******************************************************************************
+* DISCLAIMER
+* 
+* INFINEON’S MODEL TERMS OF USE
+*
+* BY DOWNLOADING AND/OR USING THIS INFINEON MODEL (“MODEL”), THE USER
+* (INCLUDING YOU) AGREES TO BE BOUND BY THE TERMS OF USE HERE STATED. IF USER
+* DOES NOT AGREE TO ALL TERMS OF USE HERE STATED, USER SHALL NOT DOWNLOAD,
+* USE OR COPY THE MODEL BUT IMMEDIATELY DELETE IT (TO THE EXTENT THAT IT
+* WAS DOWNLOADED ALREADY).
+*
+* 1. SCOPE OF USE
+* 1.1 Any use of this Model provided by Infineon Technologies AG is subject
+*     to these Terms of Use.
+* 1.2 This Model, provided by Infineon, does not fully represent all of the
+*     specifications and operating characteristics of the product to which
+*     this Model relates.
+* 1.3 This Model only describes the characteristics of a typical product.
+*     In all cases, the current data sheet information for a given product
+*     is the final design guideline and the only actual performance
+*     specification. Although this Model can be a useful tool to evaluate
+*     the product performance, it cannot simulate the exact product performance
+*     under all conditions and it is also not intended to replace
+*     bread-boarding for final verification.
+*
+* 2. IMPORTANT NOTICE
+* 2.1 Infineon Technologies AG (“Infineon”) is not and cannot be aware of the
+*     specific application of the Infineon’s Model by User. However, Model may
+*     from time to time be used by User in potentially harmful and/or life-
+*     endangering applications such as traffic, logistic, medical, nuclear
+*     or military applications or in other applications where failure of the
+*     Model may predictably cause damage to persons’ life or health or to
+*     property (hereinafter "Critical Applications").
+* 2.2 User acknowledges that Infineon has not specifically designed or
+*     qualified the Model for Critical Applications that the Model may contain
+*     errors and bugs and that User is required to qualify the Model for
+*     Critical Applications pursuant to the applicable local quality, safety
+*     and legal requirements before permitting or giving access to any such use.
+*
+* 3. CONFIDENTIAL INFORMATION
+*     User shall treat ideas, concepts and information incorporated in the
+*     Model, the documentation and the content of this Terms of Use (together
+*     hereinafter "Confidential Information") confidential, not disclose it to
+*     any third party unless otherwise agreed in writing between User and
+*     Infineon, not use it for any other purposes than using the Model for
+*     simulation and testing purposes only.
+*
+* 4. WARRANTY
+* 4.1 User acknowledges that the Model is provided by Infineon under this Terms	       
+*     of Use is provided free of charge and "AS IS" without any warranty or 	      
+*     liability of any kind and Infineon hereby expressly disclaims any 		      
+*     warranties or representations, whether express, implied, statutory or 	      
+*     otherwise, including but not limited to warranties of workmanship, 		      
+*     merchantability, fitness for a particular purpose, defects in the 		      
+*     Model, or non-infringement of third parties intellectual property rights.	       
+* 4.2 Infineon reserves the right to make corrections, deletions, modifications, 	      
+*     enhancements, improvements and other changes to the Model at any time 	      
+*     or to move or discontinue any Model without notice. 			      
+* 										      
+* 5. LIABILITY 									      
+* 5.1 Nothing in this Terms of Use shall limit or exclude Infineon's liability 	      
+*     under mandatory liability laws, for injuries to life, body or health,  	      
+*     for fraudulent concealment of defects in the software, or in cases 		      
+*     of Infineon's intentional misconduct or gross negligence. 			      
+* 5.2 Without prejudice to Sections 5.1, in cases of Infineon's slight		       
+*     negligent breach of obligations that restrict essential rights or duties 	      
+*     arising from the nature of this Terms of Use in a way that there is a 	      
+*     risk of non-achievement of the purpose of this Terms of Use or of an 	      
+*     obligation whose observance User regularly may trust in and whereas		       
+*     compliance with only makes proper execution of this Terms of Use 		      
+*     possible, Infineon's liability shall be limited to the typically, 		      
+*     foreseeable damage. 							      
+* 5.3 Without prejudice to Sections 8.1 and 8.2, Infineon's liability under 	      
+*     this Agreement shall be excluded in all other cases. 			      
+* 										      
+* 6. EXPORT REGULATIONS 								      
+*     The User shall comply with all applicable national and international 	      
+*     laws and regulations, in particular the applicable export control 		      
+*     regulations and sanction programs. The User also agrees not to 		      
+*     export, re-export or transfer any software or technology developed		       
+*     with or using information, software or technology offered by Infineon, 	      
+*     in violation of any applicable laws or regulations of the competent 	      
+*     authorities. Further, the User shall neither use any products, 		      
+*     information, software and technology offered by Infineon in or in 		      
+*     connection with nuclear technology or weapons of mass destruction 		      
+*     (nuclear, biological or chemical) and carriers thereof nor supply 		      
+*     military consignees. 							      
+* 										      
+* 7. TERMINATION OF USE PERMIT 							      
+*     If the User violates these Terms of Use, such User’s permit to use 		      
+*     this Model terminates automatically. In addition, Infineon may 		      
+*     terminate the User’s permit to use this Model at its discretion and 	      
+*     at any time regardless of any violation of these Terms of Use. In 		      
+*     any of the foregoing events, the User is obliged to immediately destroy 	      
+*     any content that has been downloaded or printed from Infineon’s website. 	      
+* 										      
+* 8. MISCELLANEOUS 								      
+* 8.1 These Terms of Use are subject to the laws of the Federal Republic 		      
+*     of Germany with the exception of the United Nations on Purchase 		      
+*     Contracts on the International Sale of Goods dated April 11, 1980 (CISG). 	      
+*     The exclusive place of jurisdiction is Munich, Germany. 			      
+* 8.2 Should any provision in these Terms of Use be or become invalid, the 	      
+*     validity of all other provisions or agreements shall remain unaffected
+*     thereby.
+*
+******************************************************************************
+.SUBCKT 2ED2109S06F LO HO COM IN VCC VB VS NSD
+R_HIN HIN COM 1E12
+C_HIN HIN COM 1F
+R_HO HO COM 1E12
+C_HO HO COM 1F
+R_VB VB COM 1E12
+C_VB VB COM 1F
+R_VS VS COM 1E12
+C_VS VS COM 1F
+R_LIN LIN COM 1E12
+C_LIN LIN COM 1F
+R_LO LO COM 1E12
+C_LO LO COM 1P
+R_VCC VCC COM 1E12
+C_VCC VCC COM 1F
+R_DT DT COM 1M
+X_GD_TEMPLATE LO HO COM IN VCC VB VS NSD DT TWO_ED2109S06F_GD_TEMPLATE
+.ENDS 2ED2109S06F
+* DTO=0 leads to PWL with two consecutive points having the same abscissa
+*.SUBCKT TWO_ED2109S06F_GD_TEMPLATE LO HO COM IN VCC VB VS SD DT PARAMS: HB_EN=1 DT0=0.0 DT1=0.2 IC_0=5.555E-05 IC_1=6E-06 DT_CURRENT=   ; DT0=0.0 buggy ***************************************
+.SUBCKT TWO_ED2109S06F_GD_TEMPLATE LO HO COM IN VCC VB VS SD DT PARAMS: HB_EN=1 DT0=1e-9 DT1=0.2 IC_0=5.555E-05 IC_1=6E-06 DT_CURRENT=   ; DT0=0.0 buggy   *************************************
++ 1U P_SD_D=2.783E-8 P_TH_SD_UP=2.1 P_TH_SD_DW=0.9 P_C_TPD=2.832E-08 P_TH_TPD=0.4973 P_TH_HIN_OFF=0.9 P_TH_LIN_OFF=0.9 P_TH_HIN_ON=
++ 2.1 P_TH_LIN_ON=2.1 P_R_HIN_CL=200000.0 P_R_LIN_CL=200000.0 P_C_GATE=1E-11 P_RBOND_NMOS=0.01 P_RBOND_PMOS=0.01 P_LO_VGS_NMOS=6.1 
++ P_LO_VGS_PMOS=8.3 P_LPMOS_LAMDA=0.149 P_LPMOS_KP=3.379E-06 P_LNMOS_LAMDA=0.021 P_LNMOS_KP=4.101E-05 P_HO_VGS_NMOS=6.1 P_HO_VGS_PMOS=
++ 8.3 P_HPMOS_LAMDA=0.149 P_HPMOS_KP=3.379E-06 P_HNMOS_LAMDA=0.021 P_HNMOS_KP=4.101E-05 P_VCC_UVH=9.1 P_VCC_UVL=8.2 P_VB_UVL=7.2 
++ P_VB_UVH=8.2 P_R_UV_D_H=142857.142 P_R_UV_D_L=71428.571 P_VCC_MIN=10 P_IQ_VCC=0.00045 P_VB_MIN=10 P_IQ_VB=0.00017 P_V_LEAK=650 
++ P_I_LEAK=1E-06 P_R_BSD=33 P_N_BSD=1.41 P_IS_BSD=4.1E-16
+R_IN_CLAMP IN COM {P_R_HIN_CL}
+D_IN_VCC IN VCC TWO_ED2109S06F_ESD_DIO
+D_COM_IN COM IN TWO_ED2109S06F_ESD_DIO
+.MODEL TWO_ED2109S06F_ESD_DIO D(IS=1E-15 , RS=1K , N=1)
+X_CL_IN IN COM TWO_ED2109S06F_CL_DIO PARAMS: P_V_BV=5 P_I_BV=0.1M
+X_CL_VCC VCC COM TWO_ED2109S06F_CL_DIO PARAMS: P_V_BV=25 P_I_BV=1
+X_CL_VB VB VS TWO_ED2109S06F_CL_DIO PARAMS: P_V_BV=25 P_I_BV=1
+D_BS_DIODE VCC VB TWO_ED2109S06F_BS_DIO
+.MODEL TWO_ED2109S06F_BS_DIO D(IS={P_IS_BSD}, RS={P_R_BSD}, N={P_N_BSD})
+X_INPUT_STAGE D_LIND D_HIND SD_D IN SD COM VS VCC TWO_ED2109S06F_INPUT_STAGE PARAMS: P_SD_D={P_SD_D} P_TH_SD_UP={P_TH_SD_UP} 
++ P_TH_SD_DW={P_TH_SD_DW} P_C_TPD={P_C_TPD} P_TH_TPD={P_TH_TPD} P_TH_HIN_OFF={P_TH_HIN_OFF} P_TH_LIN_OFF={P_TH_LIN_OFF} P_TH_HIN_ON=
++ {P_TH_HIN_ON} P_TH_LIN_ON={P_TH_LIN_ON}
+X_DEADTIME_SIMPLE D_LIND D_HIND D_LIN_DT D_HIN_DT DT VCC_UV VCC TWO_ED2109S06F_DEADTIME_SIMPLE PARAMS: DT0={DT0} IC_0={IC_0} DT1={DT1} 
++ IC_1={IC_1} HB_EN={HB_EN} DT_CURRENT={DT_CURRENT}
+X_HO_STAGE HO D_HIN_DT VCC_UV VB_UV SD_D VB VS TWO_ED2109S06F_HO_STAGE PARAMS: P_RBOND_PMOS={P_RBOND_PMOS} P_RBOND_NMOS={P_RBOND_NMOS} 
++ P_C_GATE={P_C_GATE} P_HO_VGS_PMOS={P_HO_VGS_PMOS} P_HPMOS_LAMDA={P_HPMOS_LAMDA} P_HPMOS_KP={P_HPMOS_KP} P_HO_VGS_NMOS=
++ {P_HO_VGS_NMOS} P_HNMOS_LAMDA={P_HNMOS_LAMDA} P_HNMOS_KP={P_HNMOS_KP}
+X_LO_STAGE LO D_LIN_DT VCC_UV SD_D VCC COM TWO_ED2109S06F_LO_STAGE PARAMS: P_RBOND_PMOS={P_RBOND_PMOS} P_RBOND_NMOS={P_RBOND_NMOS} 
++ P_C_GATE={P_C_GATE} P_LO_VGS_PMOS={P_LO_VGS_PMOS} P_LPMOS_LAMDA={P_LPMOS_LAMDA} P_LPMOS_KP={P_LPMOS_KP} P_LO_VGS_NMOS=
++ {P_LO_VGS_NMOS} P_LNMOS_LAMDA={P_LNMOS_LAMDA} P_LNMOS_KP={P_LNMOS_KP}
+X_UV_DETECT VCC_UV VB_UV VCC VB COM VS TWO_ED2109S06F_UV_DETECT PARAMS: P_VB_UVL={P_VB_UVL} P_VB_UVH={P_VB_UVH} P_R_UV_D_H=
++ {P_R_UV_D_H} P_VCC_UVL={P_VCC_UVL} P_VCC_UVH={P_VCC_UVH} P_R_UV_D_L={P_R_UV_D_L}
+X_CC_EMULATOR VCC COM VB VS TWO_ED2109S06F_CC_EMULATOR PARAMS: P_VB_MIN={P_VB_MIN} P_VCC_MIN={P_VCC_MIN} P_IQ_VB={P_IQ_VB} P_IQ_VCC=
++ {P_IQ_VCC} P_I_LEAK={P_I_LEAK} P_V_LEAK={P_V_LEAK}
+.ENDS TWO_ED2109S06F_GD_TEMPLATE
+.SUBCKT TWO_ED2109S06F_INPUT_STAGE D_LIND D_HIND SD_D IN SD COM VS VCC PARAMS: P_SD_D=5E-08 P_TH_SD_UP=2.1 P_TH_SD_DW=1.1 P_C_TPD=
++ 1.9E-07 P_TH_TPD=0.5 P_TH_HIN_OFF=0.9 P_TH_LIN_OFF=0.9 P_TH_HIN_ON=2.1 P_TH_LIN_ON=2.1
+E_INT_5V INT_5V COM VALUE {TABLE( V(VCC,COM) , 0,0 , 1,0 , 5,5 , 100,5 )}
+R_INT_5V INT_5V COM 1E12
+C_INT_5V INT_5V COM 10P
+R_PULLUP INT_5V SD 100K
+XST_SD SD D_SD COM TWO_ED2109S06F_STP_IDEAL PARAMS: P_TH_UP={P_TH_SD_UP} P_TH_DW={P_TH_SD_DW}
+X_SD D_SD SD_D TWO_ED2109S06F_RC_DELAY_10 PARAMS: P_C_DELAY = {P_SD_D} P_TH_TPD = 0.5
+X_1 IN INP COM TWO_ED2109S06F_STP_IDEAL PARAMS: P_TH_UP={P_TH_HIN_ON} P_TH_DW={P_TH_HIN_OFF}
+E_HINP HINP 0 VALUE={V(INP)}
+E_LINP LINP 0 VALUE={1-V(INP)}
+X_HINPD HINP HINPD TWO_ED2109S06F_RC_DELAY_10 PARAMS: P_C_DELAY = {P_C_TPD} P_TH_TPD = {P_TH_TPD}
+E_D_HIND D_HIND 0 VALUE {IF( (V(HINPD) > 0.5) , 1.0,0.0 )*IF(V(VS,COM)>=-11,1,0)}
+X_LINPD LINP LINPD TWO_ED2109S06F_RC_DELAY_10 PARAMS: P_C_DELAY = {P_C_TPD} P_TH_TPD = {P_TH_TPD}
+E_D_LINDN D_LIND 0 VALUE {IF( (V(LINPD) > 0.5) , 1.0,0.0 )}
+.ENDS TWO_ED2109S06F_INPUT_STAGE
+.SUBCKT TWO_ED2109S06F_DEADTIME_SIMPLE D_LIND D_HIND D_LIN_DT D_HIN_DT DT VCC_UV VCC PARAMS: DT0=12U IC_0=1500U DT1=15M IC_1=1500U 
++ HB_EN=1 DT_CURRENT=1U
+E_HBE HBE 0 VALUE={{HB_EN}}
+G_DT VCC DT VALUE={ {DT_CURRENT} * V(VCC_UV) }
+V_HO_UP UP_HO 0 5
+D2 CAP_HO UP_HO TWO_ED2109S06F_D_D1
+G_HO 0 CAP_HO VALUE={IF(V(HBE)>0.5,1,0) * TABLE( V(DT), 0, {IC_0}, {DT0}, {IC_0}, {DT1}, {IC_1} ) }
+C_HO_CAP CAP_HO 0 10P
+R_1 CAP_HO 0 100MEG
+S_HO CAP_HO 0 D_HIND 0 TWO_ED2109S06F__SWITCH
+X_HO CAP_HO D_LIN_DTA 0 TWO_ED2109S06F_STP_IDEAL PARAMS: P_TH_UP=3 P_TH_DW=1
+E_OH D_LIN_DT 0 VALUE={IF( V(HBE)<0.5 | V(D_LIN_DTA) >0.5,1,0)*V(D_LIND)}
+V_UP_LO UP_LO 0 5
+D1 CAP_LO UP_LO TWO_ED2109S06F_D_D1
+G_LO 0 CAP_LO VALUE={IF(V(HBE)>0.5,1,0)* TABLE( V(DT), 0, {IC_0}, {DT0}, {IC_0}, {DT1}, {IC_1} ) }
+C_LO_CAP CAP_LO 0 10P
+R_2 CAP_LO 0 100MEG
+S_LO CAP_LO 0 D_LIND 0 TWO_ED2109S06F__SWITCH
+X_LO CAP_LO D_HIN_DTA 0 TWO_ED2109S06F_STP_IDEAL PARAMS: P_TH_UP=3 P_TH_DW=1
+E_OL D_HIN_DT 0 VALUE={IF( (V(HBE)<0.5 | V(D_HIN_DTA) >0.5) & V(VCC_UV) > 0.5 & V(D_HIND) >0.5 ,1,0)}
+.MODEL TWO_ED2109S06F_D_D1 D( IS=1E-15 TT=200P)
+.MODEL TWO_ED2109S06F__SWITCH VSWITCH RON=1 ROFF=100MEG VON=0.8 VOFF=0.2
+.ENDS TWO_ED2109S06F_DEADTIME_SIMPLE
+.SUBCKT TWO_ED2109S06F_HO_STAGE HO D_HIN_DT VCC_UV VB_UV SD_D VB VS PARAMS: P_RBOND_NMOS=10M P_RBOND_PMOS=10M P_C_GATE=1E-12 
++ P_HO_VGS_PMOS=6 P_HPMOS_LAMDA=0.06 P_HPMOS_KP=60U P_HO_VGS_NMOS=6 P_HNMOS_LAMDA=0.05 P_HNMOS_KP=100U
+R_A_HIND D_HIN_DT D_HIN_DTD 100
+C_A_HIND D_HIN_DTD 0 1N
+R_A_SDD SD_D SD_DIG_DEL 100
+C_A_SDD SD_DIG_DEL 0 1N
+E_HIN_PLS HIN_PLS 0 VALUE {IF( ((V(D_HIN_DT) - V(D_HIN_DTD)) > 0.1 | ((V(SD_D)- V(SD_DIG_DEL)) >0.1 & V(D_HIN_DT)>0.5)) | ((V( 
++ D_HGATE) > 0.5) & V(D_HIN_DT)>0.5), 1.0,0.0 )}
+E_D_HGATE D_HGATE 0 VALUE {IF( ( V(VB_UV) > 0.5 & V(HIN_PLS) > 0.5 & V(SD_D) > 0.5 ) , 1.0,0.0 )}
+R_HGATED D_HGATE HGATED 1
+C_HGATED HGATED 0 1P
+E_HGATE_P VB HGATE_P VALUE {{P_HO_VGS_PMOS} * V(HGATED)}
+E_HGATE_N HGATE_N VS VALUE {(1 - V(HGATED)) * {P_HO_VGS_NMOS} }
+M_HO_PMOS HO HGATE_P VB VB TWO_ED2109S06F_HO_PMOS
+M_HO_NMOS HO HGATE_N VS VS TWO_ED2109S06F_HO_NMOS
+C_1 HGATE_P VB 5P
+C_2 VB HO 5P
+C_4 HGATE_N VS 5P
+C_5 HO VS 5P
+.MODEL TWO_ED2109S06F_HO_PMOS PMOS (LEVEL=1 VTO=-1 W=1M L=1U RB=1M RG=10 RS=1M RD={P_RBOND_PMOS} LAMBDA={P_HPMOS_LAMDA} KP= 
++ {P_HPMOS_KP} )
+.MODEL TWO_ED2109S06F_HO_NMOS NMOS (LEVEL=1 VTO=1 W=1M L=1U RB=1M RG=10 RS=1M RD={P_RBOND_NMOS} LAMBDA={P_HNMOS_LAMDA} KP= 
++ {P_HNMOS_KP} )
+.ENDS TWO_ED2109S06F_HO_STAGE
+.SUBCKT TWO_ED2109S06F_LO_STAGE LO D_LIN_DT VCC_UV SD_D VCC COM PARAMS: P_RBOND_NMOS=10M P_RBOND_PMOS=10M P_C_GATE=1E-12 P_LO_VGS_PMOS=
++ 6 P_LPMOS_LAMDA=0.06 P_LPMOS_KP=60U P_LO_VGS_NMOS=6 P_LNMOS_LAMDA=0.05 P_LNMOS_KP=100U
+E_D_LGATE D_LGATE 0 VALUE {IF( (V(VCC_UV) > 0.5 & V(D_LIN_DT) > 0.5 & V(SD_D) > 0.5 ), 1.0,0.0 )}
+R_LGATED D_LGATE LGATED 1
+C_LGATED LGATED 0 1P
+E_LGATE_P VCC LGATE_P VALUE {V(LGATED) * {P_LO_VGS_PMOS} }
+E_LGATE_N LGATE_N COM VALUE {(1 - V(LGATED)) * {P_LO_VGS_NMOS} }
+M_LO_PMOS LO LGATE_P VCC VCC TWO_ED2109S06F_LO_PMOS
+M_LO_NMOS LO LGATE_N COM COM TWO_ED2109S06F_LO_NMOS
+C_1 LGATE_P VCC 5P
+C_2 VCC LO 5P
+C_4 LGATE_N COM 5P
+C_5 LO COM 5P
+.MODEL TWO_ED2109S06F_LO_PMOS PMOS (LEVEL=1 VTO=-1 W=1M L=1U RB=1M RG=10 RS=1M RD={P_RBOND_PMOS} LAMBDA={P_LPMOS_LAMDA} KP= 
++ {P_LPMOS_KP} )
+.MODEL TWO_ED2109S06F_LO_NMOS NMOS (LEVEL=1 VTO=1 W=1M L=1U RB=1M RG=10 RS=1M RD={P_RBOND_NMOS} LAMBDA={P_LNMOS_LAMDA} KP= 
++ {P_LNMOS_KP} )
+.ENDS TWO_ED2109S06F_LO_STAGE
+.SUBCKT TWO_ED2109S06F_UV_DETECT VCC_UV VB_UV VCC VB COM VS PARAMS: P_VB_UVL=7 P_VB_UVH=8 P_R_UV_D_H=142857 P_VCC_UVL=8 P_VCC_UVH=9 
++ P_R_UV_D_L=71428
+X_VB_UV VB D_VB_UV VS TWO_ED2109S06F_STP_IDEAL PARAMS: P_TH_UP={P_VB_UVH} P_TH_DW={P_VB_UVL}
+R_VB_UV D_VB_UV VB_UV {P_R_UV_D_H}
+C_VB_UV VB_UV 0 1P
+X_VCC_UV VCC D_VCC_UV COM TWO_ED2109S06F_STP_IDEAL PARAMS: P_TH_UP={P_VCC_UVH} P_TH_DW={P_VCC_UVL}
+R_VCC_UV D_VCC_UV VCC_UV {P_R_UV_D_L}
+C_VCC_UV VCC_UV 0 1P
+.ENDS TWO_ED2109S06F_UV_DETECT
+.SUBCKT TWO_ED2109S06F_CC_EMULATOR VCC COM VB VS PARAMS: P_VB_MIN=10 P_VCC_MIN=10 P_IQ_VB=100U P_IQ_VCC=500U P_I_LEAK=1.0U P_V_LEAK=650
+
+*G_QB VB VS VALUE {TABLE(V(VB,VS) , 0,0 , 0.1,1U , 1,100U , 0.8*{P_VB_MIN},{P_IQ_VB})} ********************************************************************
+.param P_VB_MIN08 = 'P_VB_MIN * 0.8'
+G_QB VB VS VALUE {TABLE(V(VB,VS) , 0,0 , 0.1,1U , 1,100U , {P_VB_MIN08},{P_IQ_VB})}
+
+R_QB VB VS 1E12
+
+*G_QCC VCC COM VALUE {TABLE(V(VCC,COM) , 0,0 , 0.1,1U , 1,100U , 0.8*{P_VCC_MIN},{P_IQ_VCC})} ********************************************************************************************
+.param P_VCC_MIN08 = 'P_VCC_MIN * 0.8'
+G_QCC VCC COM VALUE {TABLE(V(VCC,COM) , 0,0 , 0.1,1U , 1,100U , {P_VCC_MIN08},{P_IQ_VCC})}
+
+R_QCC VCC COM 1E12
+G_VB_LEAK VB COM VALUE {TABLE(V(VB,COM) , 0,0 , {P_V_LEAK},{P_I_LEAK})}
+R_VB_LEAK VB COM 1E12
+.ENDS TWO_ED2109S06F_CC_EMULATOR
+.SUBCKT TWO_ED2109S06F_CL_DIO C A PARAMS: P_V_BV=5 P_I_BV=1
+
+* Not o.k. because resulting B source PWL does not accept ***********************************************************************
+* functions as arguments, only values (reals, integers)
+* use extra .params and the numparam parser
+
+.param P_V_BV101 = {P_V_BV*1.01}
+.param P_V_BV102 = {P_V_BV*1.02}
+.param P_V_BV10 = {P_V_BV*10}
+.param P_I_BV100 = {P_I_BV*100}
+G_CL_DIO C A VALUE {TABLE(V(C,A) , 0,0 , {P_V_BV101},0 , {P_V_BV102},{P_I_BV} , {P_V_BV10}, {P_I_BV100} )}
+*G_CL_DIO C A VALUE {TABLE(V(C,A) , 0,0 , {P_V_BV}*1.01,0 , {P_V_BV}*1.02,{P_I_BV} , 10*{P_V_BV}, 100*{P_I_BV} )}
+C_CL_DIO C A 1P
+R_CL_DIO C A 1E12
+.ENDS TWO_ED2109S06F_CL_DIO
+.SUBCKT TWO_ED2109S06F_RC_DELAY_10 IN OUT PARAMS: P_C_DELAY = 60E-9 P_TH_TPD = 0.5
+X_D1 IN D1 TWO_ED2109S06F_RC_DELAY_5 PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D2 D1 OUT TWO_ED2109S06F_RC_DELAY_5 PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+.ENDS TWO_ED2109S06F_RC_DELAY_10
+.SUBCKT TWO_ED2109S06F_RC_DELAY_5 IN OUT PARAMS: P_C_DELAY = 60E-9 P_TH_TPD = 0.5
+X_D1 IN D1 TWO_ED2109S06F_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D2 D1 D2 TWO_ED2109S06F_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D3 D2 D3 TWO_ED2109S06F_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D4 D3 D4 TWO_ED2109S06F_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+X_D5 D4 OUT TWO_ED2109S06F_RC_DELAY_BASE PARAMS: P_C_DELAY = {P_C_DELAY} P_TH_TPD = {P_TH_TPD}
+.ENDS TWO_ED2109S06F_RC_DELAY_5
+.SUBCKT TWO_ED2109S06F_RC_DELAY_BASE IN OUT PARAMS: P_C_DELAY = 60E-9 P_TH_TPD = 0.5
+R_DELAY IN IND 1
+C_DELAY IND 0 {P_C_DELAY}
+E_DELAY OUT 0 VALUE={IF( V(IND) > {P_TH_TPD} , 1.0,0.0 )}
+.ENDS TWO_ED2109S06F_RC_DELAY_BASE
+.SUBCKT TWO_ED2109S06F_STP_IDEAL IN OUT GND PARAMS: P_TH_UP=0.9 P_TH_DW=0.1
+E_OUTP OUTP 0 VALUE={IF( V(IN,GND)>={P_TH_UP} | V(OUTN)<0.5 , 1,0 )}
+E_OUTN OUTN 0 VALUE={IF( V(IN,GND)<={P_TH_DW} | V(OUTP)<0.5 , 1,0 )}
+E_OUT1 OUT1 0 VALUE={V(OUTP)}
+R_1 OUT1 OUT 1
+C_1 OUT 0 1P
+.ENDS TWO_ED2109S06F_STP_IDEAL
+.SUBCKT TWO_ED2109S06F_STN_IDEAL IN OUT GND PARAMS: P_TH_UP=0.9 P_TH_DW=0.1
+E_OUTP OUTP1 0 VALUE={IF( V(IN,GND)>={P_TH_UP} | V(OUTN)<0.5 , 1,0 )}
+R_P OUTP1 OUTP 1
+C_P OUTP 0 1P
+E_OUTN OUTN1 0 VALUE={IF( V(IN,GND)<={P_TH_DW} | V(OUTP)<0.5 , 1,0 )}
+R_N OUTN1 OUTN 1
+C_N OUTN 0 1P
+E_OUT1 OUT1 0 VALUE={V(OUTN)}
+R_1 OUT1 OUT 1
+C_1 OUT 0 1P
+.ENDS TWO_ED2109S06F_STN_IDEAL

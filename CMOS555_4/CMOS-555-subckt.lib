@@ -1,0 +1,60 @@
+* CMOS 555
+* How to obtain this subcircuit?
+* Copy (or expand) KiCad project CMOS555_2.7z into a new directory
+* Eeschema, edit circuit: remove all external devices 
+* Remove all 0 (ground) pins, connect and label the wires with GND0
+* Export the netlist
+* Add the .subckt ... .ends lines, add all nets to be exported
+* Sort the nets according to the numbering of the 555 footprint
+
+*** CMOS model cards **************
+* use default model parameters BSIM3
+
+.model N1 NMOS level=8 version=3.3.0
+.model P1 PMOS level=8 version=3.3.0
+
+*** CMOS devices ******************
+
+.subckt NCH D G S B W=1 L=1 M=1
+MN1 D G S B N1 W={W} L={L} M={M} AS={3*L*W} AD={3*L*W} PS={6*L+W} AS={6*L+W}
+.ends
+
+.subckt PCH D G S B W=1 L=1 M=1
+MP1 D G S B P1 W={W} L={L} M={M} AS={3*L*W} AD={3*L*W} PS={6*L+W} AS={6*L+W}
+.ends
+
+***********************************
+
+*** CMOS 555 circuit ******************
+.subckt CMOS555 GND0 Trigger Output Reset FM Threshold Discharge Vcc
+XMN12 Net-_MN12-Pad1_ Net-_MN11-Pad1_ GND0 GND0 NCH W=10u L=0.5u M=1
+XMP9 Net-_MN11-Pad1_ Net-_MP9-Pad2_ Net-_MP10-Pad3_ Net-_MP10-Pad3_ PCH W=10u L=0.5u M=1
+R1 Net-_MP18-Pad2_ Net-_MN14-Pad2_ 100k
+R4 Net-_MP9-Pad2_ GND0 40k
+XMN7 Net-_MN14-Pad2_ Net-_MN14-Pad2_ GND0 GND0 NCH W=5u L=5u M=1
+XMN11 Net-_MN11-Pad1_ Net-_MN11-Pad1_ GND0 GND0 NCH W=10u L=0.5u M=1
+XMP10 Net-_MN12-Pad1_ Trigger Net-_MP10-Pad3_ Net-_MP10-Pad3_ PCH W=10u L=0.5u M=1
+XMN2 Net-_MN2-Pad1_ FM Net-_MN1-Pad3_ GND0 NCH W=10u L=0.5u M=1
+XMP3 Net-_MN1-Pad1_ Net-_MN2-Pad1_ Vcc Vcc PCH W=10u L=0.5u M=1
+XMN1 Net-_MN1-Pad1_ Threshold Net-_MN1-Pad3_ GND0 NCH W=10u L=0.5u M=1
+XMP4 Net-_MN2-Pad1_ Net-_MN2-Pad1_ Vcc Vcc PCH W=10u L=0.5u M=1
+XMP6 Net-_MP18-Pad2_ Net-_MP18-Pad2_ Vcc Vcc PCH W=10u L=5u M=1
+XMP8 Net-_MP10-Pad3_ Net-_MP18-Pad2_ Vcc Vcc PCH W=10u L=5u M=1
+R2 Vcc FM 40k
+R3 FM Net-_MP9-Pad2_ 40k
+XMN5 Net-_MN1-Pad3_ Net-_MN14-Pad2_ GND0 GND0 NCH W=5u L=5u M=1
+XMP25 Output Net-_MN23-Pad1_ Vcc Vcc PCH W=20u L=0.5u M=10
+XMP19 Net-_MN16-Pad1_ Net-_MP18-Pad2_ Vcc Vcc PCH W=10u L=5u M=1
+XMP22 Net-_MN23-Pad1_ Net-_MN16-Pad1_ Vcc Vcc PCH W=4u L=0.5u M=1
+XMN16 Net-_MN16-Pad1_ Net-_MN14-Pad1_ GND0 GND0 NCH W=5u L=5u M=1
+XMN14 Net-_MN14-Pad1_ Net-_MN14-Pad2_ GND0 GND0 NCH W=5u L=5u M=1
+XMN24 Discharge Net-_MN23-Pad1_ GND0 GND0 NCH W=100u L=0.5u M=1
+XMN26 Output Net-_MN23-Pad1_ GND0 GND0 NCH W=20u L=0.5u M=5
+XMN23 Net-_MN23-Pad1_ Net-_MN16-Pad1_ GND0 GND0 NCH W=10u L=0.5u M=1
+XMP18 Net-_MN17-Pad1_ Net-_MP18-Pad2_ Vcc Vcc PCH W=10u L=5u M=1
+XMP15 Net-_MN12-Pad1_ Reset Vcc Vcc PCH W=5u L=0.5u M=1
+XMP13 Net-_MN14-Pad1_ Net-_MN1-Pad1_ Vcc Vcc PCH W=20u L=0.5u M=1
+XMN17 Net-_MN17-Pad1_ Net-_MN12-Pad1_ GND0 GND0 NCH W=5u L=5u M=1
+XMN21 Net-_MN16-Pad1_ Net-_MN17-Pad1_ GND0 GND0 NCH W=10u L=0.5u M=1
+XMN20 Net-_MN17-Pad1_ Net-_MN16-Pad1_ GND0 GND0 NCH W=10u L=0.5u M=1
+.ends

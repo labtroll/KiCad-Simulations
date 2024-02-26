@@ -1,0 +1,21 @@
+Howto generate a subcircuit model for KiCad from a KiCad circuit
+
+Save 741.kicad_sch as 741_subckt.kicad_sch
+
+Edit 741_subckt.kicad_sch:
+Remove all external circuitry
+
+Create ngspice netlist file 741_subckt.cir by command
+Eeschema --> Export --> Netlist... -> Spice --> Export Netlist
+
+Copy 741_subckt.cir to 741.lib
+
+Edit 741.lib:
+Add title and comments in lines starting with a *
+Add .subckt line as first line after title/comment lines:
+1. Keyword .subckt
+2. Name    KI741
+3. Nodes   all nodes named by a global label
+4. Node sequence: Sort nodes according to KiCad symbol LM741
+Rename .end to .ends
+Optional: replace '.include bipmod.lib' by contents of bipmod.lib

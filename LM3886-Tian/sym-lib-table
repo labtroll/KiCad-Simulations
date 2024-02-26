@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "tian")(type "KiCad")(uri "${KIPRJMOD}/tian.kicad_sym")(options "")(descr ""))
+)

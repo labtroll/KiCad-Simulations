@@ -1,0 +1,82 @@
+* ngspice model for LTC1044
+* derived from the block diagrams given in the datasheet by
+* Holger Vogt, 240213
+* Copyright Holger Vogt, 2024
+* License 3-clause BSD
+
+* Info is available at
+* https://www.analog.com/en/products/ltc1044.html
+
+* LV (pin6) not supported, OSC (pin7) overriding per external clock supported, 
+* pin7 capacitor to change osc frequency not supported.
+
+.subckt LTC1044HV pin1 pin2 pin3 pin4 pin5 pin6 pin7 pin8
+
+.param asw=0
+
+.if (asw==1)
+.model switch4 pswitch(cntl_off=1.65 cntl_on=1.65 r_on=1.0 log=TRUE)
+AS1 %g q %gd(pin8 pin2) switch4
+AS2 %g qn %gd(pin2 pin3) switch4
+AS3 %g q %gd(pin3 pin4) switch4
+AS4 %g qn %gd(pin4 pin5) switch4
+.else
+.model swa sw(vt=1.65)
+S1 pin8 pin2 q 0 swa
+S2 pin2 pin3 qn 0 swa
+S3 pin3 pin4 q 0 swa
+S4 pin4 pin5 qn 0 swa
+.endif
+
+CS1 q 0 1p
+CS2 qn 0 1p
+
+abridge1 [dq dqn] [q qn] dac1
+.model dac1 dac_bridge(out_low = 0.7 out_high = 3.0 out_undef = 2.2
++ input_load = 5.0e-12 t_rise = 50e-9
++ t_fall = 20e-9)
+
+*flipflop
+a7 dqn din nc2 nc3 dq dqn flop1
+.model flop1 d_dff(clk_delay = 13.0e-9 set_delay = 25.0e-9
++ reset_delay = 27.0e-9 rise_delay = 10.0e-9
++ fall_delay = 3e-9)
+
+*oscillator
+a5 pin1 dosc var_clock
+.model var_clock d_osc(cntl_array = [-2 0 1 2]
++ freq_array = [1e3 1e3 6e3 6e3]
++ duty_cycle = 0.5 init_phase = 0
++ rise_delay = 10e-9 fall_delay=8e-9)
+
+* pull down pin1 to 0 if open
+Rpin1 pin1 0 1G 
+
+*convergence helper
+Rp2 pin2 0 1e9
+*Rp4 pin4 0 1e9
+
+*pin7 (osc) external override ******************************************
+Vp7 int7 pin8 1
+Rp71 int7 pin7 1Meg
+Rp72 int7 0 1G
+* dselect7 high: pin7 open, internal osc
+* dselect7 low: external oscillator
+abridge2 [%vd(pin7 pin8)] [dselect7] adc_buff
+.model adc_buff adc_bridge(in_low = 0.5 in_high = 0.5)
+
+abridge3 [pin7] [dp7] adc_buff
+.model adc_buff adc_bridge(in_low = 0.5 in_high = 0.5)
+
+*mux
+ana1 [dosc dselect7] dna1 and1
+ana2 [dp7 ~dselect7] dna2 and1
+aor12 [dna1 dna2] din or12
+
+.model or12 d_or(rise_delay = 0.5e-9 fall_delay = 0.3e-9
++ input_load = 0.5e-12)
+
+.model and1 d_and(rise_delay = 0.5e-9 fall_delay = 0.3e-9
++ input_load = 0.5e-12)
+**************************************************************************
+.ends

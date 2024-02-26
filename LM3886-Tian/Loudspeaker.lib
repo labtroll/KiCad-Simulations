@@ -1,0 +1,138 @@
+* https://www.electro-tech-online.com/threads/ltspice-model-loudspeaker.142634/
+* Source File: SpeakerBlock.asc
+* Developer: ETech (eetech00@yahoo.com)
+* Created: Oct 25 2014
+* Revision: NA
+*
+* This Loudspeaker spice model was tested with
+* LTSpice IV. Temperature is not modeled. It is
+* intended to be used as a test aid for audio
+* crossover networks.
+*
+* Modified for ngspice by H. Vogt
+* Jan 6th, 2022
+*
+* The following parameters can usually be supplied
+* directly from the speaker specification sheet
+* Parameters:
+* Re = Measured Voice Coil Resistance
+* Le = Measured Voice Coil Inductance
+* Fs = Resonant Frequency
+* Qms = Mech Suspension control measurement (Surround and Spider)
+* Qes = Electrical Suspension control measurement (Voice coil and Magnet)
+*
+* Calculations:
+* Res = (Qms / Qes) * Re = (Core & Suspension Losses)
+* Lces = Re / (2 * pi * Fs * Qes)  = (Cone Mass)
+* Cmes = Qes / (2 * pi * Fs * Re) = (Cone Suspension)
+*
+* Template use info:
+* 1. Copy template to appropriate section
+*    (Tweeter, Midrange, Woofer, subwoofer section)
+* 2. Replace [Name] with unique name (use model number)
+* 3. Replace each [value] with appropiate value
+* 4. Remove comment character "*" before ".subckt",
+*    "XSpkr" and ".ends" statements to activate.
+****************Begin Template*****************
+* [Description]
+*
+*.subckt [Name] SPK+ SPK- PARAMS: Re=[value] Le=[value] Fs=[value] Qms=[value] Qes=[value]
+*
+** Do not edit line below, but remove leading "*" character
+*XSpkr SPK+ SPK- speaker Re1={Re} Le1={Le} Fs1={Fs} Qms1={Qms} Qes1={Qes}
+*
+*.ends [Name]
+****************END Template*******************
+*
+*
+* Subckt Symbol Definitions
+*
+*
+* TWEETER
+***********************************************
+* Dayton Audio DC28F-4 1-1/8" Silk Dome Tweeter
+*
+.subckt DC28F4 SPK+ SPK- PARAMS: Re=2.82 Le=0.51m Fs=535 Qms=2.3 Qes=0.99
+*
+XSpkr SPK+ SPK- speaker Re={Re} Le={Le} Fs={Fs} Qms={Qms} Qes={Qes}
+*
+.ends DC28F4
+*
+* Dayton Audio DC28F-8 1-1/8" Silk Dome Tweeter
+*
+.subckt DC28F8 SPK+ SPK- PARAMS: Re=5.5 Le=0.09m Fs=637.2 Qms=0.82 Qes=0.90
+*
+XSpkr SPK+ SPK- speaker Re={Re} Le={Le} Fs={Fs} Qms={Qms} Qes={Qes}
+*
+.ends DC28F8
+
+*
+* Focal Tc120td5 20mm Tioxid Dome Tweeter
+*
+.subckt Tc120td5 SPK+ SPK- PARAMS: Re=6 Le=1.49m Fs=812.7 Qms=2.79 Qes=1.15
+*
+XSpkr SPK+ SPK- speaker Re={Re} Le={Le} Fs={Fs} Qms={Qms} Qes={Qes}
+*
+.ends Tc120td5
+
+* Focal Tc120tdx 20mm Tioxid Dome Tweeter
+*
+.subckt Tc120tdx SPK+ SPK- PARAMS: Re=5.7 Le=0.08m Fs=1181 Qms=2.16 Qes=1.42
+*
+XSpkr SPK+ SPK- speaker Re1={Re} Le1={Le} Fs1={Fs} Qms1={Qms} Qes1={Qes}
+*
+.ends Tc120tdx
+*
+*
+* MIDRANGE
+***********************************************
+* Dayton Audio DC50FA-8 Classic Series 2" Dome Midrange
+*
+.subckt DC50FA8 SPK+ SPK-
+.PARAM Re=4.50 Le=0.41m Fs=380 Qms=4.13 Qes=1.16
+*
+XSpkr SPK+ SPK- speaker Re={Re} Le={Le} Fs={Fs} Qms={Qms} Qes={Qes}
+*
+.ends DC50FA8
+*
+*
+* WOOFER
+***********************************************
+* Dayton Audio RS225-8 8" Reference Woofer
+*
+.subckt RS2258 SPK+ SPK- PARAMS: Re=6.53 Le=0.86m Fs=28 Qms=1.46 Qes=0.51
+*
+XSpkr SPK+ SPK- speaker Re={Re} Le={Le} Fs={Fs} Qms={Qms} Qes={Qes}
+*
+.ends RS2258
+*
+*
+* SUBWOOFER
+***********************************************
+* Dayton Audio IB385-8 8" Reference Woofer
+*
+.subckt IB3858 SPK+ SPK- PARAMS: Re=5.2 Le=3.08m Fs=21.5 Qms=8.92 Qes=0.63
+*
+XSpkr SPK+ SPK- speaker Re={Re} Le={Le} Fs={Fs} Qms={Qms} Qes={Qes}
+*
+.ends IB3858
+*
+*
+* Main speaker model definition (do not edit)
+***********************************************
+.subckt speaker SP+ SP- Re={Re} Le={Le} Fs={Fs} Qms={Qms} Qes={Qes}
+*
+.param Re = {Re}
+.param Le = {Le}
+.param pi = 3.14
+.param Res = {(Qms / Qes) * Re}
+.param Lces = {Re / (2 * pi * Fs * Qes)}
+.param Cmes = {Qes / (2 * pi * Fs * Re)}
+*
+L2 SP- 3 {Lces}
+C1 3 SP- {Cmes}
+L1 2 3 {Le}
+R2 3 SP- {Res}
+R1 2 SP+ {Re}
+*
+.ends speaker

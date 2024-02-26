@@ -1,0 +1,25 @@
+* models for LLC, Boost
+
+* switch 2
+.subckt sw2 in+ in- out+ out-
+.model swn2 VSWITCH(Ron=1 Roff=1e6 Von=2.6 Voff=2.4)
+sn out+ out- in+ in- swn2
+.ends
+
+* switch 1
+.subckt sw1 in+ in- out+ out-
+.model swn VSWITCH(Ron=1m Roff=1e6 Von=2.6 Voff=2.4)
+sn out+ out- in+ in- swn
+.ends
+
+.subckt L1L2L3 p1 p2 s1 s2 s3
+Rp p1 p11 1m
+Lp1 p11 p2 135u
+Rs2 s1 s11 1m
+Ls2 s11 s2 31u
+Rs3 s2 s22 1m
+Ls3 s22 s3 31u
+K1 Lp1 Ls2 0.99
+K2 Ls2 Ls3 0.99
+K3 Lp1 Ls3 0.99
+.ends

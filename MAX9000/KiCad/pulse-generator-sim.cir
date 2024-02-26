@@ -1,0 +1,24 @@
+.title KiCad schematic
+.include "D:/Spice_general/KiCad-799/cpresser/KiCad/max9000_LT.lib"
+.save all
+V1 +5V GND DC 5 
+C2 GND +5V 100n
+C1 /an /AOUT 220p
+R5 /an /AOUT 1Meg
+R1 /cinp /AOUT 124k
+R2 /cinp /COUT 154k
+R4 /COUT /an 42k
+R6 /AOUT Net-_J2-In_ 50
+XU1 /REF /an /cinp +5V GND /REF /AOUT /COUT max9000
+R3 GND /cinp 66k
+
+.tran 1u 400u
+
+.control
+run
+rusage time
+set xbrushwidth=3
+plot v(/aout) v(/cout)
+.endc
+
+.end

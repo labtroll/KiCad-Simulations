@@ -1,0 +1,37 @@
+Test model ICL8038
+.include ICL8038.lib
+
+*               Sine wave adjust
+*               |    Sine wave out
+*               |    |    Triangle out
+*               |    |    |    Duty cycle, freq adjust
+*               |    |    |    |    Duty cycle, freq adjust
+*               |    |    |    |    |    V+
+*               |    |    |    |    |    |    FM Bias
+*               |    |    |    |    |    |    |    FM Sweep in
+*               |    |    |    |    |    |    |    |    Square wave out
+*               |    |    |    |    |    |    |    |    |    Timing cap
+*               |    |    |    |    |    |    |    |    |    |     V- or GND
+*               |    |    |    |    |    |    |    |    |    |     |     Sine wave adjust
+*               |    |    |    |    |    |    |    |    |    |     |     |
+*subckt ICL8038 Pin1 Pin2 Pin3 Pin4 Pin5 Pin6 Pin7 Pin8 Pin9 Pin10 Pin11 Pin12
+X8083 Pin1  Pin2  Pin3  Pin4  Pin5  Vd  short  short  Pin9  Pin10  GND  Pin12 ICL8038
+
+*Rs1 Pin1 Vd 100k
+Radj1 Pin4 Vd 10k
+Radj2 Pin5 Vd 10k
+Rsqour Pin9 Vd 10k
+Vdd Vd 0 10
+Ct Pin10 0 100n
+Rs2 Pin12 0 82k
+
+.options  method=gear
+
+.control
+tran 100n 10m
+rusage
+set xbrushwidth=2
+plot Pin2-4 Pin3 Pin9+8
+.endc
+
+.end

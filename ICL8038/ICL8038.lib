@@ -1,0 +1,136 @@
+* ICL8038 model
+* derived from the bipolar circuit given in the datasheet by
+* Holger Vogt, 240211
+* Copyright Holger Vogt, 2024
+* Info is available at
+* https://www.renesas.com/document/dst/icl8038-datasheet
+* http://www.bmo.physik.uni-muenchen.de/~riedle/Elektronik_I/KW102/ICL8038.pdf
+* https://www.richis-lab.de/gen02.htm
+* License 3-clause BSD
+*
+*               Sine wave adjust
+*               |    Sine wave out
+*               |    |    Triangle out
+*               |    |    |    Duty cycle, freq adjust
+*               |    |    |    |    Duty cycle, freq adjust
+*               |    |    |    |    |    V+
+*               |    |    |    |    |    |    FM Bias
+*               |    |    |    |    |    |    |    FM Sweep in
+*               |    |    |    |    |    |    |    |    Square wave out
+*               |    |    |    |    |    |    |    |    |    Timing cap
+*               |    |    |    |    |    |    |    |    |    |     V- or GND
+*               |    |    |    |    |    |    |    |    |    |     |     Sine wave adjust
+*               |    |    |    |    |    |    |    |    |    |     |     |
+.subckt ICL8038 Pin1 Pin2 Pin3 Pin4 Pin5 Pin6 Pin7 Pin8 Pin9 Pin10 Pin11 Pin12
+.model NP NPN (BF=125 Cje=0.5p Cjc=0.5p Rb=500)
+.model PN LPNP (BF=25 Cje=0.3p Cjc=1.5p Rb=250)
+.model __D2 D
+.model __D3 D
+.model __D5 D
+.model __D4 D
+
+Q14 Net-_Q12-B_ Net-_Q12-B_ Net-_Q14-E_ NP
+R12 Net-_Q14-E_ Pin11 100
+R8 Net-_Q12-E_ Pin11 100
+R10 Net-_Q13-B_ Net-_Q11-B_ 470
+Q12 Net-_Q10-E_ Net-_Q12-B_ Net-_Q12-E_ NP
+R2 Pin6 Net-_D2-A_ 30k
+Q2 Pin6 Net-_D2-A_ Net-_Q2-E_ NP
+D2 Net-_D2-A_ Net-_D2-K_ __D2
+D3 Net-_D2-K_ Net-_D3-K_ __D3
+D5 Net-_D4-K_ Pin11 __D5
+D4 Net-_D3-K_ Net-_D4-K_ __D4
+Q3 Pin9 Net-_Q3-B_ Pin11 NP
+Q11 Net-_Q10-E_ Net-_Q11-B_ Pin11 NP
+Q13 Net-_Q13-C_ Net-_Q13-B_ Pin11 NP
+R6 Net-_Q3-B_ Pin11 2.7k
+R9 Net-_Q2-E_ Net-_Q13-C_ 620
+R5 Net-_Q4-E_ Net-_Q3-B_ 270
+Q4 Pin6 Net-_Q13-C_ Net-_Q4-E_ NP
+R11 Net-_Q13-C_ Net-_Q20-B_ 27k
+R14 Net-_Q2-E_ Net-_Q13-B_ 1.8k
+Q20 Net-_Q13-B_ Net-_Q20-B_ Pin11 NP
+Q22 Net-_Q13-B_ Net-_Q22-B_ Pin11 NP
+Q21 Net-_Q20-B_ Net-_Q21-B_ Pin11 NP
+R15 Net-_Q21-B_ Pin11 4.7k
+R16 Net-_Q22-B_ Pin11 4.7k
+Q29 Pin6 Net-_Q26-E_ Net-_Q29-E_ NP
+R19 Net-_Q29-E_ Pin11 27k
+Q30 Pin11 Net-_Q29-E_ Net-_Q30-E_ PN
+R18 Net-_Q26-E_ Net-_Q29-E_ 27k
+Q18 Pin10 Net-_Q10-E_ Net-_Q12-B_ NP
+R13 Net-_Q19-E_ Pin11 100
+Q19 Net-_Q12-B_ Net-_Q12-B_ Net-_Q19-E_ NP
+Q7 Net-_Q15-B_ Net-_Q15-B_ Pin8 NP
+Q5 Pin6 Pin8 Net-_Q15-B_ NP
+R3 Pin6 Pin7 11k
+R4 Pin7 Pin11 39k
+Q9 Net-_Q15-B_ Net-_Q10-B_ Net-_Q9-E_ NP
+R7 Net-_Q9-E_ Net-_Q10-E_ 40k
+Q8 Pin5 Net-_Q6-C_ Net-_Q10-B_ NP
+Q6 Net-_Q6-C_ Net-_Q15-B_ Pin5 PN
+Q10 Net-_Q10-B_ Net-_Q10-B_ Net-_Q10-E_ NP
+Q17 Net-_Q16-E_ Net-_Q16-E_ Pin10 NP
+Q16 Pin4 Net-_Q15-C_ Net-_Q16-E_ NP
+Q15 Net-_Q15-C_ Net-_Q15-B_ Pin4 PN
+Q23 Net-_Q22-B_ Net-_Q23-B_ Pin6 PN
+R20 Pin6 Net-_Q33-B_ 27k
+Q34 Pin6 Net-_Q33-B_ Pin3 NP
+R24 Pin3 Pin2 1k
+Q26 Pin6 Net-_Q16-E_ Net-_Q26-E_ NP
+Q33 Net-_Q33-B_ Net-_Q33-B_ Net-_Q30-E_ NP
+R17 Pin6 Net-_Q23-B_ 4k
+Q25 Net-_Q23-B_ Pin10 Net-_Q25-E_ NP
+Q31 Pin6 Net-_Q31-B_ Net-_Q27-E_ NP
+Q36 Pin6 Net-_Q36-B_ Net-_Q31-B_ NP
+R22 Net-_Q36-B_ Net-_Q37-B_ 5k
+R23 Net-_Q37-B_ Pin11 5k
+R21 Pin6 Net-_Q36-B_ 5k
+Q32 Pin11 Net-_Q32-B_ Net-_Q28-E_ PN
+Q24 Net-_Q21-B_ Pin10 Net-_Q24-E_ PN
+Q28 Net-_Q21-B_ Net-_Q24-E_ Net-_Q28-E_ PN
+R7B2 Pin6 Net-_Q28-E_ 15k
+Q27 Net-_Q23-B_ Net-_Q25-E_ Net-_Q27-E_ NP
+R7A2 Net-_Q27-E_ Pin11 10k
+Q37 Pin11 Net-_Q37-B_ Net-_Q32-B_ PN
+Q40 Pin6 Net-_Q40-B_ Net-_Q40-E_ NP
+Q39 Pin11 Net-_Q39-B_ Net-_Q38-B_ PN
+R25 Pin2 Net-_Q38-E_ 10k
+R26 Pin2 Net-_Q40-E_ 2.7k
+R27 Pin2 Net-_Q42-E_ 800
+Q35 Pin11 Net-_Q29-E_ Pin3 PN
+R31 Pin6 Net-_Q44-B_ 33k
+R40 Net-_Q47-B_ Net-_Q39-B_ 1600
+R29 Pin6 Net-_Q40-B_ 33k
+Q41 Pin11 Net-_Q41-B_ Net-_Q40-B_ PN
+Q42 Pin6 Net-_Q42-B_ Net-_Q42-E_ NP
+R30 Pin6 Net-_Q42-B_ 33k
+Q43 Pin11 Net-_Q43-B_ Net-_Q42-B_ PN
+R35 Net-_Q39-B_ Net-_Q41-B_ 330
+R34 Net-_Q41-B_ Net-_Q43-B_ 375
+R46 Net-_Q50-B_ Pin11 33k
+R47 Pin2 Net-_Q48-E_ 2.7k
+Q48 Pin11 Net-_Q48-B_ Net-_Q48-E_ PN
+Q47 Pin6 Net-_Q47-B_ Net-_Q46-B_ NP
+R43 Pin2 Net-_Q46-E_ 10k
+Q38 Pin6 Net-_Q38-B_ Net-_Q38-E_ NP
+R28 Pin6 Net-_Q38-B_ 33k
+R42 Net-_Q46-B_ Pin11 33k
+Q46 Pin11 Net-_Q46-B_ Net-_Q46-E_ PN
+R45 Net-_Q49-B_ Pin11 33k
+R44 Net-_Q48-B_ Pin11 33k
+R32 Pin12 Pin11 5.6k
+Q44 Pin6 Net-_Q44-B_ Pin2 NP
+Q45 Pin11 Pin12 Net-_Q44-B_ PN
+R33 Net-_Q43-B_ Pin12 200
+Q53 Pin6 Pin1 Net-_Q50-B_ NP
+Q50 Pin11 Net-_Q50-B_ Pin2 PN
+R41 Pin6 Pin1 5.2k
+R39 Net-_Q51-B_ Net-_Q47-B_ 330
+R38 Net-_Q52-B_ Net-_Q51-B_ 375
+Q52 Pin6 Net-_Q52-B_ Net-_Q49-B_ NP
+Q49 Pin11 Net-_Q49-B_ Net-_Q49-E_ PN
+R48 Pin2 Net-_Q49-E_ 800
+Q51 Pin6 Net-_Q51-B_ Net-_Q48-B_ NP
+R36 Pin1 Net-_Q52-B_ 200
+.ends

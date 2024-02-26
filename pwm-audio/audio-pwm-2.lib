@@ -1,0 +1,14 @@
+* Audio-PWM with input frequency 1200k, variable duty cycle
+.subckt audiopwm out+ out- in+ in-
+apwm %vd in+ in- dout pwm
+.model pwm d_pwm(
++ frequency = 1.2Meg
++ cntl_array = [-1 -0.99 0.99 1]
++ dc_array = [0.01 0.01 0.99 0.99]
++ init_phase = 90
++ rise_delay = 2e-9 fall_delay = 2e-9)
+
+Rout dout out+ 1
+Rout2 dout out- 1
+
+.ends

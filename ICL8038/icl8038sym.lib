@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# icl8038
+#
+DEF icl8038 U 0 40 Y Y 1 F N
+F0 "U" 0 800 60 H V C CNN
+F1 "icl8038" 0 -850 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S 500 -800 -500 700 0 1 0 f
+X sine_adjust 1 700 -300 200 L 50 50 1 1 P
+X timing_cap 10 -700 -700 200 R 50 50 1 1 P
+X v-_or_gnd 11 700 -700 200 L 50 50 1 1 W
+X sine-adj_2 12 700 -450 200 L 50 50 1 1 P
+X n/c 13 -50 -800 200 U 50 50 1 1 N N
+X nc 14 50 -800 200 U 50 50 1 1 N N
+X sine_out 2 700 100 200 L 50 50 1 1 O
+X triangle_out 3 700 350 200 L 50 50 1 1 O
+X duty_1 4 -700 400 200 R 50 50 1 1 P
+X duty_2 5 -700 100 200 R 50 50 1 1 P
+X v+ 6 -700 600 200 R 50 50 1 1 W
+X fm_bias 7 -700 -500 200 R 50 50 1 1 P
+X fm_sweep 8 -700 -200 200 R 50 50 1 1 P
+X square_out 9 700 600 200 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+#End Library
