@@ -32,6 +32,7 @@ The output load is switched at 13ms from 60 to 20 Ohms. The two cursors clearly 
 See [boost-complete](boost-complete)
 
 Here is a version which does not need ngspice-42, as it relies on a pwm generator made with the vernerable one-shot code model.
+
 See [boost-regulated-os](boost-regulated-os)
 
 
@@ -80,9 +81,9 @@ This is an update to the basic class D amplifier: Use parameters for the PWM mod
 
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/606fa2dc-abce-4d02-978f-2667975ce5d4)
 
-See [pwm-audio-2](pwm-audio-2)
-
 This one benefits again from the new PWM generator in ngspice-42, as the old one shows some dimples in the output, due to missing pulses.
+
+See [pwm-audio-2](pwm-audio-2)
 
 
 ## Another Class-D 2.5 kW audio amplifier
@@ -104,11 +105,10 @@ A circuit to demonstrate using a code model inside of a subcircuit.
 The ouput is dressed in beautiful colors:
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/b9a6e1cd-ac05-4a9a-8388-4531b79239f0)
 
-
-See [analog-multiplier](analog-multiplier)
-
 You may do amplitude modulation studies, e.g. by setting V2 to `dc=0 ampl=1 f=100k` and V1 to `dc=0.6 ampl=0.4 f=1k`, just to obtain
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/fc906f61-11e8-48a9-a34f-c03b97f8f456)
+
+See [analog-multiplier](analog-multiplier)
 
 
 ## Generic symbols with generic models
@@ -162,19 +162,16 @@ THis project contains a new spice model for the ICL8038, some info how to create
 See [ICL8038](ICL8038)
 
 The model circuit
-[**IMG**](https://kicad-info.s3.dualstack.us-west-2.amazonaws.com/original/3X/0/e/0ea047b07c97f5ce2c888ac4456bb42f1e78ce44.png)
+[image](https://kicad-info.s3.dualstack.us-west-2.amazonaws.com/original/3X/0/e/0ea047b07c97f5ce2c888ac4456bb42f1e78ce44.png)
 
 The example circuit
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/579bb401-43b4-40fd-b1ac-f8a087411e01)
 
 The output, scaled
-
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/038ce876-6c1c-466e-ac86-df04aa73a349)
 
 ## Generating a negative voltage from a positive supply with LTC1044
 LTC1044.lib contains a new behavioral ngspice model. The project is
-
-See [LTC1044](LTC1044)
 
 The circuit
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/58bcc086-95af-49bc-820b-b5d76b7784a3)
@@ -182,87 +179,61 @@ The circuit
 and some output of a transient simulation
 ![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/52b569b4-c599-4c74-8676-12d288b192ca)
 
+See [LTC1044](LTC1044)
 
-# More circuits from previous post, here now tested/updated for KiCad 7.99
 
-:exclamation: Add title and description/images from original post(s)
+# More circuits from previous posts, here now tested/updated for KiCad 7.99
+
 
 ## Integrated linear amp (LM3886), simple, real, Tian Probe
 
-See [LM3886_simple](LM3886_simple)
-
-See [LM3886](LM3886)
-
-See [LM3886-Tian](LM3886-Tian)
-
-IMG LM3886_complete_circuit
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/e5b2b180-956d-43ba-98cf-3ed748adbd1a)
 
 The Tian probe may be used for a stability analysis of the feedback amplifier. More info is available in the attached project, file Tian.readme.
 
+See [LM3886-Tian](LM3886-Tian)
 
-## Pass Labs F5 Class A Audio Amplifier
-
-See [PassLabsF5](PassLabsF5)
-
-IMG PassLabsF5_circuit
-
-Information on this amplifier stems from https://www.firstwatt.com/pdf/art_f5_turbo.pdf, and there are extensive threads how to build it at https://www.diyaudio.com/community/threads/f5-turbo-builders-thread.207103/ and https://www.diyaudio.com/community/threads/f5turbo-illustrated-build-guide.254056/ . Electro-thermal simulation is used, as not only electrical signals are considered, but also self-heating of the power transistors and their cooling by heat sinks. 
-
-
-## Simple VDMOS Audio Amplifier
-
-See [Dual-NMOS-Amp-VDMOS](Dual-NMOS-Amp-VDMOS)
-
-
-IMG Dual_VDMOS_Circuit
-
-
-
-## VDMOS Audio Amplifier with OpAmp, Optional Tian Probe
-
-See [MOSAMP_VDMOS_601](MOSAMP_VDMOS_601)
-
-See [MOSAMP_VDMOS_601-TIAN](MOSAMP_VDMOS_601-TIAN)
-
-IMG MOSAMP_VDMOS_601-Tian-circuit
 
 ## A bipolar 741 operational amplifier
 Including a desription and example how to generate a subcircuit model for the 741 with help of the Eeschema internal circuit.
 
 See [741](741)
 
-IMG 741_panorama
-
-
-
-
-## Sallen-Key-Bandpass Filter (Dual OpAmp)
-
-See [sallen_key-bandpass-072](sallen_key-bandpass-072)
-
-
-IMG Sallen-Key-Circuit
-
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/dd9d5ccc-0837-4f5b-afff-cee75f2dd2e3)
 
 
 ## Q17, a redesign of the famous QUAD405 High-End Audio Amplifier, 
 made by Tiberiu Vicol (https://www.diyaudio.com/community/threads/q17-a-quad405-audiophile-approach-to-perfect-sound.374507/). He designed circuit and PCB with KiCad, I have modified his files to enable simulation with KiCad/ngspice.
 See [Q17](Q17)
 
-IMG Q17-circuit
-​ ​ 22  23 / 23 ​ ​
-See [Q17](Q17)
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/040b5529-712d-443c-b6d0-863e76d1e2e6)
 
-See [LM3886-Tian](LM3886-Tian)
+
+## rel_osc
+
+:exclamation: No documentation found.
 
 See [rel_osc](rel_osc)
 
+
+## bip-osc-2
+
+:exclamation: No documentation found.
+
 See [bip-osc-2](bip-osc-2)
+
+
+## CMOS555_4
+
+:exclamation: No documentation found.
 
 See [CMOS555_4](CMOS555_4)
 
-See [PassLabsF5](PassLabsF5)
+
+## FullBridge
+
+:exclamation: No documentation found.
 
 See [FullBridge](FullBridge)
 
-See [741](741)
+
