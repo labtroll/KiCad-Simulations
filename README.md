@@ -14,127 +14,119 @@ The examples provided should run out-of-the-box: Extract the *.7z file into a di
 
 The circuits shown below are not optimized, but may serve as a good starting point.
 
-## [Boost Converter](Boost)
+## Boost Converter
 The first example is a simple boost converter, powering up 2.5 V to about 6 to 7 V. The switch is a power MOS device, the load is switched from 120 to 60 Ohms.
 
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/a0f52cce-47e1-4e7d-aeef-eae7541fbfee)
 
-**IMG**
-
-
-**IMG**
-
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/1d862b1d-2371-4a9e-b05d-e739fe6cc158)
 
 See [Boost](Boost)
 
 ## Regulated boost converter
 The previous example has been a 'free-running' converter. Load-switching and variation in input voltage will require some regulation. The following example adds a reference voltage, an error amplifier and a PWM (pulse-width modulation) stage to the simple boost converter. Here ngspice-42 is required, as it contains an improved PWM generator.
 
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/622b48f4-dff6-410a-b3c6-eef5cffdedc0)
 The output load is switched at 13ms from 60 to 20 Ohms. The two cursors clearly show that the output voltage regulation is working.
 
-**IMG**
-
 See [boost-complete](boost-complete)
-Here is a version which does not need ngspice-42, as it relies on a pwm generator made with the vernerable one-shot code model.
 
+Here is a version which does not need ngspice-42, as it relies on a pwm generator made with the vernerable one-shot code model.
 See [boost-regulated-os](boost-regulated-os)
 
 
 ## Buck Converter
 A simple buck converter with power NMOS
 
-
-**IMG**
-
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/f7c5ebdf-a9be-428c-9eaf-1609e729e342)
 
 See [Buck](Buck)
 
 
-## [Royer Converter](Royer/)
+## Royer Converter
 The next one is a Royer converter, as described in https://www.mikrocontroller.net/articles/Royer_Converter (in German).
 
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/efaaa064-9f82-4b38-a782-36418f5f7800)
 
 See [Royer](Royer)
+
 
 ## LLC Converter
 The next one is a resonant LLC converter:
 
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/e792c2e4-84f8-444a-bf88-ea27e06cc430)
+
 The look is a little ugly, as for the lack of a voltage controlled switch symbol I have used relay symbols. But there are ngspice switch models attached to these symbols!
 
 See [LLC](LLC)
 
+
 ## Digital PWM amplifier
 This is the very basic prototype of a digital amplifier. You have a sine source, a PWM modulator with digital ouput, an anlog filter and the analog load.
 
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/02e60258-e178-45e6-a994-8c6a11459905)
+
 The digital output consists of two inverse digital signals dn and dp:
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/71e1130b-ee6e-4ca3-8806-27e7ae728df0)
 
-**IMG**
 The analog plot compares the sine input versus the differential output voltage on the load resistor R1:
-
-**IMG**
-
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/b026a2e5-3818-4bd5-b981-ac2f2961dffb)
 
 See [pwm-audio](pwm-audio)
+
 
 ## Digital PWM amplifier update
 This is an update to the basic class D amplifier: Use parameters for the PWM modulator, increase the output voltage to 200V: this yields in an output power of 2.7 kW. And nothing explodes (a benefit of the simulation)!
 
-**IMG**
-
-
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/606fa2dc-abce-4d02-978f-2667975ce5d4)
 
 See [pwm-audio-2](pwm-audio-2)
 
 This one benefits again from the new PWM generator in ngspice-42, as the old one shows some dimples in the output, due to missing pulses.
 
+
 ## Another Class-D 2.5 kW audio amplifier
 with half bridge MOS driver and a 'home made' audio driver circuit model (pwm, non-inverted and inverted outputs, dead-time, hi-side and low-side outputs).
 
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/43a48acf-3eef-420d-b34f-3d0f663f4341)
+
 The simple Class-D-s uses the one-shot PWM (already available in ngspice-41 and older), the slightly more complex Class-D uses the somewhat faster new PWM from ngspice-42.
 
-
 See [Class-D](Class-D)
-
 
 
 ## Analog multiplier
 A circuit to demonstrate using a code model inside of a subcircuit.
 
 
-**IMG**
-The ouput is dressed in beautiful colors:
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/652d356a-97da-43c7-a8e1-5895c13a9a94)
 
-**IMG**
+The ouput is dressed in beautiful colors:
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/b9a6e1cd-ac05-4a9a-8388-4531b79239f0)
+
 
 See [analog-multiplier](analog-multiplier)
+
 You may do amplitude modulation studies, e.g. by setting V2 to `dc=0 ampl=1 f=100k` and V1 to `dc=0.6 ampl=0.4 f=1k`, just to obtain
-
-
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/fc906f61-11e8-48a9-a34f-c03b97f8f456)
 
 
 ## Generic symbols with generic models
 The next circuit uses symbols and models from the Simulation_Spice library (opamp and npn transistor). So for a quick analysis there is no need to search for specific device models. Transient and small signal ac is simulated.
 
-**IMG**
-
-
-
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/50e2dc28-791b-48f8-8f12-d72a3d4b9d5d)
 
 See [intro4](intro4)
+
 
 ## IBIS interface simulation
 Some "finger execises" in the new IBIS module are shown next. IBIS allows to simulate drivers and receivers (the I/O of ICs and their connections) without resorting to the inner functions of the participating ICs. Typically a sequence "Driver -- Interconnecting tracks -- Receiver" is simulated. Still somewhat experimental.
 
-
-**IMG**
-
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/c76c178a-cc40-4502-80f4-f4b109f2441c)
 
 See [ibis-test](ibis-test)
+
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/08610ea2-7bf9-433f-bf8d-27cc991c27f2)
 
 
 **IMG**
@@ -142,25 +134,27 @@ See [ibis-test](ibis-test)
 ## Amplifier with controlled gain
 using the TI TCA810.
 
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/a5b9d018-19d7-430b-b048-3deed4207df8)
 
 See [gain-ctrl-amp](gain-ctrl-amp)
+
 
 ## Up-Down Counter
 The up-down counter uses a home-made symbol, a home-made counter model exploiting the ngspice/XSPICE state machine, and user-defined signals for plotting. Please have a look at README before starting the project.
 
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/89052c75-0811-4017-9129-463993c54934)
 
-**IMG**
-
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/2702402e-70c9-48d8-9c3a-4b5fe40f2f17)
 
 See [up-down-counter](up-down-counter)
 
+
 ## Triangle generator with MAX9000
 
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/694baca2-e380-43f4-a7e2-9f0eb8a3673e)
 
 See [MAX9000](MAX9000)
+
 
 ## The venerable ICL8038
 THis project contains a new spice model for the ICL8038, some info how to create such a model from the circuit diagram in the data sheet, the project to create a subcircuit for the model and an example circuit.
@@ -168,31 +162,30 @@ THis project contains a new spice model for the ICL8038, some info how to create
 See [ICL8038](ICL8038)
 
 The model circuit
-
-**IMG**
+[**IMG**](https://kicad-info.s3.dualstack.us-west-2.amazonaws.com/original/3X/0/e/0ea047b07c97f5ce2c888ac4456bb42f1e78ce44.png)
 
 The example circuit
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/579bb401-43b4-40fd-b1ac-f8a087411e01)
 
-**IMG**
 The output, scaled
 
-**IMG**
-**IMG**
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/038ce876-6c1c-466e-ac86-df04aa73a349)
 
 ## Generating a negative voltage from a positive supply with LTC1044
 LTC1044.lib contains a new behavioral ngspice model. The project is
 
 See [LTC1044](LTC1044)
+
 The circuit
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/58bcc086-95af-49bc-820b-b5d76b7784a3)
 
-**IMG**
 and some output of a transient simulation
+![image](https://github.com/labtroll/KiCad-Simulations/assets/3527219/52b569b4-c599-4c74-8676-12d288b192ca)
 
-**IMG**
 
 ## Some more circuits from my previous post, here now tested/updated for KiCad 7.99
 
-:todo: Add title and description/images from previous post(s)
+:exclamation: Add title and description/images from original post(s)
 
 * See [Q17](Q17)
 * See [LM3886-Tian](LM3886-Tian)
