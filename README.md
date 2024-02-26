@@ -1,10 +1,12 @@
 # KiCad 8 Simulation Projects
 
-The subfolders contain KiCad 8 projects with schematics containing ngspice simulations, created by [Holger Vogt](https://forum.kicad.info/u/holger), originally published in a [KiCad forum post](https://forum.kicad.info/t/more-simulation-examples-for-kicad-eeschema-ngspice/45546)
+The subfolders contain KiCad 7.99/8.0 projects with schematics containing ngspice simulations, created by [Holger Vogt](https://forum.kicad.info/u/holger), originally published in a [KiCad forum post](https://forum.kicad.info/t/more-simulation-examples-for-kicad-eeschema-ngspice/45546)
 
-Some of these circuits were presented by Holger in a Youtube video [FOSDEM 2024 - ngspice circuit simulator stand alone and embedded into kicad](https://www.youtube.com/watch?v=hnkTLkVplBI).
+Some of the circuits were presented by Holger in a Youtube video [FOSDEM 2024 - ngspice circuit simulator stand alone and embedded into kicad](https://www.youtube.com/watch?v=hnkTLkVplBI).
 
 :warning: Directories in this repository are named after the top level folder name in the original 7z file and may differ from the xxx.7z file name and the contained xxx.kicad_pro project file. This should probably be refactored to follow KiCad best practices of naming the folder the same as the contained `.kicad_pro` file. This is not a trivial task, as several of the original 7z archives contain multiple `.kicad_pro` project files.
+
+For convenience, here is a link to the [Ngspice User's Manual](https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml)
 
 # Simulation examples for KiCad/Eeschema/ngspice
 
@@ -13,6 +15,7 @@ The new simulator interface in KiCad 8 is offering a lot of enhancements, which 
 The previous examples (KiCad 6, ngspice-38) are published in [this KiCad forum post](https://forum.kicad.info/t/simulation-examples-for-kicad-eeschema-ngspice/34443), some of which have been updated and included below.
 
 The examples provided should run out-of-the-box: locate the project subfolder, open the `*.kicad_pro` project (or directly open the `*.kicad_sch` file in Eeschema 8.0) > `Inspect` -> `Simulator` -> `Run` (green triangle).
+
 
 ## Circuits
 The circuits shown below are not optimized, but may serve as a good starting point.
@@ -36,7 +39,8 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **The venerable ICL8038** See [ICL8038](ICL8038)
 * **Generating a negative voltage from a positive supply with LTC1044** See [LTC1044](LTC1044)
 
-## More circuits from previous posts, here now tested/updated for KiCad 7.99
+
+## More circuits from previous posts, tested/updated for KiCad 7.99/8.0
 
 * **Integrated linear amp (LM3886), simple, real, Tian Probe** See [LM3886-Tian](LM3886-Tian)
 * **A bipolar 741 operational amplifier** See [741](741)
