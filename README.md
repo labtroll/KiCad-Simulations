@@ -39,9 +39,8 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **Integrated linear amp (LM3886), simple, real, Tian Probe** See [LM3886-Tian](LM3886-Tian)
 * **A bipolar 741 operational amplifier** See [741](741)
 * **Q17, a redesign of the famous QUAD405 High-End Audio Amplifier** See [Q17](Q17)
+* **Digital Simulation**, see [QEI_public_799](QEI_public_799)
 * **rel_osc (missing documentation)** See [rel_osc](rel_osc)
 * **bip-osc-2 (missing documentation)** See [bip-osc-2](bip-osc-2)
 * **CMOS555_4 (missing documentation)** See [CMOS555_4](CMOS555_4)
 * **FullBridge (missing documentation)** See [FullBridge](FullBridge)
-
-
