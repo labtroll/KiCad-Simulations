@@ -1,0 +1,50 @@
+.title KiCad schematic
+.include "D:/Spice_general/KiCad-799/QEI_public/multi.lib"
+.param VCC=5
+.ic v(net-_c1-pad1_) = 0
+
+.control
+set controlswait
+if $?sharedmode ; internal ngspice
+  rusage time
+  version -s
+  set outdir = D:/TEMP ; MS Windows
+  eprvcd clk /q4 /q1 /q2 /q3 d u > $outdir/qei0.vcd
+* plotting the vcd file with GTKWave
+  if $oscompiled = 1 | $oscompiled = 8  ; MS Windows
+   shell start gtkwave $outdir/qei0.vcd --script $outdir/nggtk.tcl
+  else
+    if $oscompiled = 7 ; macOS, manual tweaking required (mark, insert, Zoom Fit)
+      shell open -a gtkwave $outdir/qei0.vcd
+    else ; Linux and others
+      shell gtkwave $outdir/qei0.vcd --script $outdir/nggtk.tcl &
+    end
+  end
+else   ; external ngspice
+  run
+  rusage time
+  set xbrushwidth=2
+  plot A B+6
+  plot u "/_y1" "/_y7" "/_y8" "/_y11" digitop
+  plot d "/_y2" "/_y4" "/_y13" "/_y14" digitop
+  plot clk "/q4" "/q1" "/q2" "/q3" d u digitop
+end
+.endc
+XU6 A B Net-_R1-Pad1_ Net-_C1-Pad1_ +5V Net-_R2-Pad1_ GND Net-_U6-Pad13_ +5V Net-_C2-Pad1_ clk Net-_R1-Pad1_ Net-_U6-Pad13_ +5V 74LS86M
+XU1 +5V A clk +5V /Q1 unconnected-_U1A-_Q-Pad6_ GND unconnected-_U1B-_Q-Pad8_ /Q3 +5V clk /Q1 +5V +5V 74LS74M
+XU2 +5V B clk +5V /Q2 unconnected-_U2A-_Q-Pad6_ GND unconnected-_U2B-_Q-Pad8_ /Q4 +5V clk /Q2 +5V +5V 74LS74M
+XU3 /Q1 /Q2 /Q3 clk /Q4 +5V /_Y7 GND /_Y6 /_Y5 /_Y4 /_Y3 /_Y2 /_Y1 /_Y0 +5V 74LS138M
+XU5 /_Y2 /_Y4 /_Y13 /_Y14 D GND /_Y1 /_Y7 /_Y8 /_Y11 U +5V 74LS20M
+XU4 /Q3 /Q2 /Q1 clk GND /Q4 /_Y15 GND /_Y14 /_Y13 /_Y12 /_Y11 /_Y10 /_Y9 /_Y8 +5V 74LS138M
+R100 unconnected-_R100-Pad1_ GND 1Meg
+R101 unconnected-_R101-Pad1_ GND 1Meg
+C1 Net-_C1-Pad1_ GND 3.3n
+R1 Net-_R1-Pad1_ Net-_C1-Pad1_ 10k
+C2 Net-_C2-Pad1_ GND 3.3n
+R2 Net-_R2-Pad1_ Net-_C2-Pad1_ 10k
+Va1 A Net-_Va1-Pad2_ PULSE( 0 {VCC} 0.5m 1n 1n 1m 2m 4 ) 
+Va2 Net-_Va1-Pad2_ GND PULSE( 0 {VCC} 10m 1n 1n 1m 2m 4 ) 
+Vb1 B Net-_Vb1-Pad2_ PULSE( 0 {VCC} 1m 1n 1n 1m 2m 4 ) 
+Vb2 Net-_Vb1-Pad2_ GND PULSE( 0 {VCC} 9.5m 1n 1n 1m 2m 4 ) 
+V5 +5V GND DC {VCC} 
+.end
