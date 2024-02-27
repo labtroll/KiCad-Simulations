@@ -22,7 +22,7 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 
 * **Boost Converter**, see [Boost](Boost)
 * **Regulated boost converter**, see [boost-complete](boost-complete)
-* **Regulated boost converter**, see [boost-regulated-os](boost-regulated-os)
+* **Regulated boost converter**, see [boost-regulated-os](boost-regulated-os)  
   Version which does not need ngspice-42, as it relies on a pwm generator made with the vernerable one-shot code model.  
 * **Buck Converter**, see [Buck](Buck)
 * **Royer Converter**, see [Royer](Royer)
