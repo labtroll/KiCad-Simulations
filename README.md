@@ -6,7 +6,7 @@ The subfolders contain KiCad 7.99/8.0 projects with schematics containing ngspic
 
 ## FOSDEM presentation
 
-A number of these circuits were included in a presentation by Holger Vogt on FOSDEM 2024 [ngspice circuit simulator - stand-alone and embedded into KiCad](https://fosdem.org/2024/schedule/event/fosdem-2024-2834-ngspice-circuit-simulator-stand-alone-and-embedded-into-kicad/) ([slides](https://fosdem.org/2024/events/attachments/fosdem-2024-2834-ngspice-circuit-simulator-stand-alone-and-embedded-into-kicad/slides/22676/ngspice-HolgerVogt_tEfhemB.pdf)) also available on [YouTube](https://www.youtube.com/watch?v=hnkTLkVplBI)
+A number of these circuits were included in a presentation on [FOSDEM 2024](https://fosdem.org/2024/): [ngspice circuit simulator - stand-alone and embedded into KiCad](https://fosdem.org/2024/schedule/event/fosdem-2024-2834-ngspice-circuit-simulator-stand-alone-and-embedded-into-kicad/) ([slides](https://fosdem.org/2024/events/attachments/fosdem-2024-2834-ngspice-circuit-simulator-stand-alone-and-embedded-into-kicad/slides/22676/ngspice-HolgerVogt_tEfhemB.pdf)) also available on [YouTube](https://www.youtube.com/watch?v=hnkTLkVplBI)
 
 ## Ngspice User's Manual
 
