@@ -47,7 +47,7 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **Q17, a redesign of the famous QUAD405 High-End Audio Amplifier**, see [Q17](Q17)
 * **Digital Simulation**, see [QEI_public_799](QEI_public_799)
 * **rel_osc (missing documentation)**, see [rel_osc](rel_osc)
-* **bip-osc-2 (missing documentation)**, see [bip-osc-2](bip-osc-2)
+* **A simple Phase Shift Oscillator** (no documentation), see [bip-osc-2](bip-osc-2)
 * **CMOS555_4 (missing documentation)**, see [CMOS555_4](CMOS555_4)
 * **FullBridge (missing documentation)**, see [FullBridge](FullBridge)
 
