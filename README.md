@@ -4,7 +4,9 @@ The subfolders contain KiCad 7.99/8.0 projects with schematics containing ngspic
 
 Some of the circuits were presented by Holger in a Youtube video [FOSDEM 2024 - ngspice circuit simulator stand alone and embedded into kicad](https://www.youtube.com/watch?v=hnkTLkVplBI).
 
-:warning: Directories in this repository are named after the top level folder name in the original 7z file and may differ from the xxx.7z file name and the contained xxx.kicad_pro project file. This should probably be refactored to follow KiCad best practices of naming the folder the same as the contained `.kicad_pro` file. This is not a trivial task, as several of the original 7z archives contain multiple `.kicad_pro` project files.
+:warning: Directories in this repository are named after the original 7z file name and may differ from the xxx.7z folder name and the contained xxx.kicad_pro project file. This should probably be refactored to follow KiCad best practices of naming the folder the same as the contained `.kicad_pro` file. This is, however, not a trivial task, as several of the original 7z archives contain multiple `.kicad_pro` project files.
+
+## Ngspice User's Manual
 
 For convenience, here is a link to the [Ngspice User's Manual](https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml)
 
