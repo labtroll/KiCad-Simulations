@@ -1,0 +1,18 @@
+* ngspice KiCad multi-device 74xx model
+
+*.subckt 74HC20M 1A 1B NC 1C 1D 1Y VGND 2Y 2A 2B NC 2C 2D VCC
+.subckt 74HC20M 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+
+.SUBCKT 74HC20  1A 1B 1C 1D 1Y
++     optional: DPWR=$G_DPWR DGND=$G_DGND
++     params: MNTYMXDLY=0 IO_LEVEL=0
+U1 nand(4) DPWR DGND
++     1A 1B 1C 1D 1Y
++     DLY_HC20 IO_HC MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+.model DLY_HC20 ugate (tplhTY=14ns tplhMX=22ns tphlTY=14ns tphlMX=22ns)
+.ENDS  74HC20
+
+* 74LS20  1A 1B 1C 1D 1Y
+XUA 1 2 4 5 6 74HC20
+XUB 9 10 12 13 8 74HC20
+.ends

@@ -17,7 +17,18 @@
       },
       "measurements": [],
       "showGrid": true,
-      "traces": []
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(AD)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(AU)",
+          "trace_type": 257
+        }
+      ]
     }
   ],
   "user_defined_signals": [],

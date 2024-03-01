@@ -1,0 +1,53 @@
+* ngspice KiCad multi-device 74xx models
+
+.subckt 74HC138M A0 A1 A2 EN1 EN2 E3 O7 VGND O6 O5 O4 O3 O2 O1 O0 VCC
+* ----------------------------------------------------------- 74HC138 ------
+*  3-Line To 8-Line Decoder/Demultiplexer
+*
+*  The High-Speed CMOS Logic Data Book, 1989, TI Pages 2-175 to 2-178
+*  bss    3/16/94
+*
+.SUBCKT 74HC138 A B C G1 G2ABAR G2BBAR Y0 Y1 Y2 Y3 Y4 Y5 Y6 Y7
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+
+U1LOG LOGICEXP(6,8) DPWR DGND
++     A B C G1 G2ABAR G2BBAR
++     Y0_O Y1_O Y2_O Y3_O Y4_O Y5_O Y6_O Y7_O
++     D0_GATE IO_HC MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  LOGIC:
++     abar = {~A}
++     bbar = {~B}
++     cbar = {~C}
++     enable = {(~G2ABAR) & (~G2BBAR) & G1}
++     Y0_O = {~(abar & bbar & cbar & enable)}
++     Y1_O = {~(A & bbar & cbar & enable)}
++     Y2_O = {~(abar & B & cbar & enable)}
++     Y3_O = {~(A & B & cbar & enable)}
++     Y4_O = {~(abar & bbar & C & enable)}
++     Y5_O = {~(A & bbar & C & enable)}
++     Y6_O = {~(abar & B & C & enable)}
++     Y7_O = {~(A & B & C & enable)}
+
+U2DLY PINDLY(8,0,6) DPWR DGND
++     Y0_O Y1_O Y2_O Y3_O Y4_O Y5_O Y6_O Y7_O
++     A B C G1 G2ABAR G2BBAR
++     Y0 Y1 Y2 Y3 Y4 Y5 Y6 Y7
++     IO_HC MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
++
++  BOOLEAN:
++     IN = {CHANGED(A,0) | CHANGED(B,0) | CHANGED(C,0)}
++     EN = {CHANGED(G2ABAR,0) | CHANGED(G2BBAR,0) | CHANGED(G1,0)}
++
++  PINDLY:
++     Y0 Y1 Y2 Y3 Y4 Y5 Y6 Y7 = {
++       CASE(
++          EN, DELAY(-1,18ns,31ns),
++          IN, DELAY(-1,18ns,36ns),
++          DELAY(-1,19ns,37ns))}
+
+.ENDS 74HC138
+
+XUA A0 A1 A2 E3 EN2 EN1 O0 O1 O2 O3 O4 O5 O6 O7 74HC138
+.ends

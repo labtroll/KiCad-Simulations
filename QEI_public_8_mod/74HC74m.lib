@@ -1,0 +1,20 @@
+* ngspice KiCad multi-device 74xx models
+.subckt 74HC74M _R1 D1 C1 _S1 Q1 _Q1 VGND _Q2 Q2 _S2 C2 D2 _R2 VCC
+
+*
+.SUBCKT 74HC74 1PREBAR 1CLRBAR 1CLK 1D 1Q 1QBAR
++     optional:  DPWR=$G_DPWR DGND=$G_DGND
++     params:  MNTYMXDLY=0 IO_LEVEL=0
+U1 DFF(1) DPWR DGND
++     1PREBAR 1CLRBAR 1CLK 1D 1Q 1QBAR
++     DLY_HC74 IO_HC MNTYMXDLY={MNTYMXDLY} IO_LEVEL={IO_LEVEL}
+.model DLY_HC74 ueff(tppcqlhTY=20ns tppcqlhMX=46ns tppcqhlTY=20ns
++                 tppcqhlMX=46ns twpclMN=25ns
++                 tpclkqlhTY=20ns tpclkqlhMX=35ns tpclkqhlTY=20ns
++                 tpclkqhlMX=35ns twclkhMN=20ns twclklMN=20ns
++                 tsudclkMN=25ns tsupcclkhMN=6ns)
+.ENDS 74HC74
+
+XUA  _S1 _R1 C1 D1 Q1 _Q1 74HC74
+XUB  _S2 _R2 C2 D2 Q2 _Q2 74HC74
+.ends
