@@ -39,7 +39,7 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **Analog multiplier**, see [analog-multiplier](analog-multiplier)
 * **Generic symbols with generic models**, see [intro4](intro4)
 * **IBIS interface simulation**, see [ibis-test](ibis-test)
-* **Amplifier with controlled gain**, see [gain-ctrl-amp](gain-ctrl-amp)
+* **Amplifier with controlled gain, using TI TCA810**, see [gain-ctrl-amp](gain-ctrl-amp)
 * **Up-Down Counter**, see [up-down-counter](up-down-counter)
 * **Triangle generator with MAX9000**, see [MAX9000](MAX9000)
 * **The venerable ICL8038**, see [ICL8038](ICL8038)
