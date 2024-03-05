@@ -1,9 +1,7 @@
 # A bipolar 741 operational amplifier
-Including a description and example how to generate a subcircuit model for the 741 with help of the Eeschema internal circuit.
+:warning: This directory contains multiple `.kicad_pro` projects with associated `.kicad_sch` schematics files, violating KiCad best practices.
 
-See [howto-subcircuit.txt](howto-subcircuit.txt) on how to generate a subcircuit model for KiCad from a KiCad circuit.
-
-:warning: This directory contains multiple `.kicad_pro` projects with associated `.kicad_sch` schematics files.
+Including a [description and example](howto-subcircuit.txt) how to generate a subcircuit model for the 741 with help of the Eeschema internal circuit.
 
 ## Project `741_circuit.kicad_*`
 ![741_circuit](https://github.com/labtroll/KiCad-Simulations/assets/3527219/d4646537-c7bb-4457-90e9-ce5e2e06a7bc)
