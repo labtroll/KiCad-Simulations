@@ -24,6 +24,13 @@
       "track_widths": [],
       "via_dimensions": []
     },
+    "ipc2581": {
+      "dist": "",
+      "distpn": "",
+      "internal_id": "",
+      "mfg": "",
+      "mpn": ""
+    },
     "layer_presets": [],
     "viewports": []
   },
@@ -350,6 +357,7 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
+    "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
