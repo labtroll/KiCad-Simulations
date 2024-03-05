@@ -10,6 +10,10 @@
         ".probe alli"
       ],
       "dottedSecondary": false,
+      "legend": {
+        "x": 82,
+        "y": 42
+      },
       "margins": {
         "bottom": 45,
         "left": 70,
@@ -55,6 +59,10 @@
         ".probe alli"
       ],
       "dottedSecondary": true,
+      "legend": {
+        "x": 900,
+        "y": 37
+      },
       "margins": {
         "bottom": 45,
         "left": 70,
@@ -90,6 +98,10 @@
         ".probe alli"
       ],
       "dottedSecondary": true,
+      "legend": {
+        "x": 79,
+        "y": 41
+      },
       "margins": {
         "bottom": 45,
         "left": 70,

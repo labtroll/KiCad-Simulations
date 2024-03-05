@@ -9,6 +9,10 @@
         ".save all"
       ],
       "dottedSecondary": true,
+      "legend": {
+        "x": 82,
+        "y": 38
+      },
       "margins": {
         "bottom": 45,
         "left": 70,

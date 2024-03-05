@@ -11,6 +11,10 @@
         ".probe allp"
       ],
       "dottedSecondary": true,
+      "legend": {
+        "x": 897,
+        "y": 82
+      },
       "margins": {
         "bottom": 45,
         "left": 70,
