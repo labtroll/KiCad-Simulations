@@ -1,0 +1,4 @@
+* Generic bipolar models
+
+.model NP NPN (BF=125 Cje=0.5p Cjc=0.5p Rb=500)
+.model PN LPNP (BF=25 Cje=0.3p Cjc=1.5p Rb=250)
