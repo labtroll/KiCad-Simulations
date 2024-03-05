@@ -51,7 +51,7 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **40106-Based Oscillator**, see [rel_osc](rel_osc)
 * **A simple Phase Shift Oscillator**, see [bip-osc-2](bip-osc-2)
 * **CMOS555_4**, see [CMOS555_4](CMOS555_4)
-* **FullBridge (missing documentation)**, see [FullBridge](FullBridge)
+* **Full Bridge N-CMOS Circuit**, see [FullBridge](FullBridge)
 * **555 Bipolar**, see [555-bipolar](555-bipolar)
 
 
