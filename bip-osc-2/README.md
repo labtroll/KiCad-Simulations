@@ -1,4 +1,4 @@
-# Bipolar Oscillator
+# A simple Phase Shift, Single Bipolar Transistor Oscillator
 
 Discrete, single transistor bipolar oscillator
 
