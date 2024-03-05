@@ -56,5 +56,6 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **A simple Phase Shift Oscillator** (no documentation), see [bip-osc-2](bip-osc-2)
 * **CMOS555_4 (missing documentation)**, see [CMOS555_4](CMOS555_4)
 * **FullBridge (missing documentation)**, see [FullBridge](FullBridge)
+* **555 Bipolar**, see [555-bipolar](555-bipolar)
 
 
