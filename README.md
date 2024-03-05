@@ -53,5 +53,5 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **CMOS555_4**, see [CMOS555_4](CMOS555_4)
 * **Full Bridge N-CMOS Circuit**, see [FullBridge](FullBridge)
 * **555 Bipolar**, see [555-bipolar](555-bipolar)
-
+* **Pass Labs F5 Turbo V2 thermal simulation**, see [PassLabsF5](PassLabsF5)
 
