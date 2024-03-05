@@ -39,22 +39,19 @@ The circuits shown below are not optimized, but may serve as a good starting poi
 * **Analog multiplier**, see [analog-multiplier](analog-multiplier)
 * **Generic symbols with generic models**, see [intro4](intro4)
 * **IBIS interface simulation**, see [ibis-test](ibis-test)
-* **Amplifier with controlled gain**, see [gain-ctrl-amp](gain-ctrl-amp)
+* **Amplifier with controlled gain, using TI TCA810**, see [gain-ctrl-amp](gain-ctrl-amp)
 * **Up-Down Counter**, see [up-down-counter](up-down-counter)
 * **Triangle generator with MAX9000**, see [MAX9000](MAX9000)
 * **The venerable ICL8038**, see [ICL8038](ICL8038)
 * **Generating a negative voltage from a positive supply with LTC1044**, see [LTC1044](LTC1044)
-
-
-## More circuits from previous posts, tested/updated for KiCad 7.99/8.0
-
 * **Integrated linear amp (LM3886), simple, real, Tian Probe**, see [LM3886-Tian](LM3886-Tian)
 * **A bipolar 741 operational amplifier**, see [741](741)
 * **Q17, a redesign of the famous QUAD405 High-End Audio Amplifier**, see [Q17](Q17)
 * **Digital Simulation**, see [QEI_public_8_mod](QEI_public_8_mod)
-* **rel_osc (missing documentation)**, see [rel_osc](rel_osc)
-* **A simple Phase Shift Oscillator** (no documentation), see [bip-osc-2](bip-osc-2)
-* **CMOS555_4 (missing documentation)**, see [CMOS555_4](CMOS555_4)
-* **FullBridge (missing documentation)**, see [FullBridge](FullBridge)
-
+* **40106-Based Oscillator**, see [rel_osc](rel_osc)
+* **A simple Phase Shift, Single Bipolar Transistor Oscillator**, see [bip-osc-2](bip-osc-2)
+* **CMOS555_4**, see [CMOS555_4](CMOS555_4)
+* **Full Bridge N-CMOS Circuit**, see [FullBridge](FullBridge)
+* **555 Bipolar**, see [555-bipolar](555-bipolar)
+* **Pass Labs F5 Turbo V2 thermal simulation**, see [PassLabsF5](PassLabsF5)
 
