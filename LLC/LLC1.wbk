@@ -19,9 +19,28 @@
       "showGrid": true,
       "traces": [
         {
+          "color": "rgb(55, 126, 184)",
+          "signal": "I(R1)",
+          "trace_type": 258
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "cursor2": {
+            "position": 0.0090016146393972,
+            "x_format": "3~s",
+            "y_format": "3~W"
+          },
+          "cursorD": {
+            "x_format": "3~s",
+            "y_format": "3~V"
+          },
+          "signal": "P(R2)",
+          "trace_type": 272
+        },
+        {
           "color": "rgb(228, 26, 28)",
           "cursor1": {
-            "position": 0.010994117647058823,
+            "position": 0.012069429494079655,
             "x_format": "3~s",
             "y_format": "3~V"
           },

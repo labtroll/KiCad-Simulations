@@ -1,7 +1,7 @@
 * models for LLC
 
 * switch
-.subckt sw1 in+ in- out+ out-
+.subckt sw1 out+ out- in+ in-
 .model swn VSWITCH(Ron=1m Roff=1e6 Von=2.6 Voff=2.4)
 sn out+ out- in+ in- swn
 .ends
