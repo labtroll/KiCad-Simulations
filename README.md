@@ -33,6 +33,7 @@ The examples provided should all run out-of-the-box:
 
 The circuits shown below are not optimized, but may serve as a good starting point.
 
+* **RC Low Pass Filter**, see [rc-filter](rc-filter)
 * **Boost Converter**, see [Boost](Boost)
 * **Regulated boost converter**, see [boost-complete](boost-complete)
 * **Regulated boost converter**, see [boost-regulated-os](boost-regulated-os)  
