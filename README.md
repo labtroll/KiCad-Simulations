@@ -4,28 +4,33 @@ The subfolders contain KiCad 7.99/8.0 projects with schematics containing ngspic
 
 :warning: Directories in this repository are named after the original 7z file name and may differ from the xxx.7z folder name and the contained xxx.kicad_pro project file. This should probably be refactored to follow KiCad best practices of naming the folder the same as the contained `.kicad_pro` file. This is, however, not a trivial task, as several of the original 7z archives contain multiple `.kicad_pro` project files.
 
+
 ## FOSDEM 2024 presentation
 
 A number of these circuits were included in a presentation on [FOSDEM 2024](https://fosdem.org/2024/): [ngspice circuit simulator - stand-alone and embedded into KiCad](https://fosdem.org/2024/schedule/event/fosdem-2024-2834-ngspice-circuit-simulator-stand-alone-and-embedded-into-kicad/) ([slides](https://fosdem.org/2024/events/attachments/fosdem-2024-2834-ngspice-circuit-simulator-stand-alone-and-embedded-into-kicad/slides/22676/ngspice-HolgerVogt_tEfhemB.pdf))
 
 [![FOSDEM 2024 - ngspice circuit simulator stand alone and embedded into kicad](https://img.youtube.com/vi/hnkTLkVplBI/0.jpg)](https://www.youtube.com/watch?v=hnkTLkVplBI)
 
+
 ## Ngspice User's Manual
 
-For convenience, here is a link to the [Ngspice User's Manual](https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml)
+For convenience, here are some useful links to ngspice documentation:
+* [ngspice User's Manual](https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml)
+* [Tutorial: ngspice simulation in KiCad/Eeschema](https://ngspice.sourceforge.io/ngspice-eeschema.html)
+
 
 # Simulation Examples
 
-The new simulator interface in KiCad 8.0 is offering a lot of enhancements, which make it absolutely worthwile to have a look at this development.
+The new simulator interface in KiCad 8.0 is offering a lot of enhancements, which make it absolutely worthwile to have a look at.
 
-The previous examples (KiCad 6, ngspice-38) are published in [this KiCad forum post](https://forum.kicad.info/t/simulation-examples-for-kicad-eeschema-ngspice/34443), some of which have been updated and included below.
-
-The examples provided should run out-of-the-box:
+The examples provided should all run out-of-the-box:
 1. Locate the project subfolder
-2. Open the `*.kicad_pro` project (or directly open the `*.kicad_sch` file)
+2. Open the `*.kicad_pro` project or directly open the schemtic in the `*.kicad_sch` file
 3. In the `KiCad Schematic Editor`: `Inspect` :arrow_right: `Simulator` :arrow_right: `Run` (green triangle).
 
-## Circuits
+
+## Simulation Circuits
+
 The circuits shown below are not optimized, but may serve as a good starting point.
 
 * **Boost Converter**, see [Boost](Boost)
